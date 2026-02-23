@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="엘림G선교회 — 네팔 한국어반, 베트남 설교·상담 사역, 거제 한화오션 해외근로자 한국어 사역, 기장 이주민 사역. 부산남부노회 공식 파송 한진준 대표.">
+<meta name="keywords" content="엘림G선교회,이주민사역,네팔한국어교육,베트남설교,기장이주민,거제한화오션외국인,한진준,이주민선교,다문화,글로컬브릿지">
+<title>엘림G선교회 | 이주민과 함께하는 글로컬 사역 | elimg.kr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green-deep:#0F4028;--green:#1A6B3A;--green-mid:#2A8C52;--green-light:#E8F5EE;--green-pale:#F2FAF5;--gold:#C49A22;--gold-light:#E8C05A;--white:#FFFFFF;--off:#F7FAF8;--gray:#6B7A6E;--text:#1A2E20}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:0 5%;height:66px;background:rgba(15,64,40,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,154,34,.2);transition:background .3s}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--green),var(--green-mid));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;border:2px solid rgba(196,154,34,.4)}
+.nav-logo-kr{font-family:'Noto Serif KR',serif;font-size:15px;color:var(--white);font-weight:700;display:block}
+.nav-logo-sub{font-size:10px;color:rgba(255,255,255,.5);display:block}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--gold-light)}
+.btn-nav{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep)!important;padding:8px 18px;border-radius:6px;font-weight:700!important}
+
+.hero{min-height:100vh;background:var(--green-deep);position:relative;display:flex;align-items:center;overflow:hidden;padding-top:66px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 30% 50%,rgba(42,140,82,.15) 0%,transparent 60%)}
+.hero-pattern{position:absolute;inset:0;opacity:.03;background-image:radial-gradient(circle,rgba(255,255,255,1) 1px,transparent 1px);background-size:32px 32px}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:60px 5%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.hero-left{animation:fadeUp .9s ease both}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,140,82,.2);border:1px solid rgba(42,140,82,.4);color:rgba(255,255,255,.8);padding:6px 16px;border-radius:20px;font-size:12px;margin-bottom:28px;font-weight:500}
+.badge .dot{width:6px;height:6px;background:var(--green-mid);border-radius:50%;animation:pulse 2s infinite}
+.hero-title{font-family:'Noto Serif KR',serif;font-size:clamp(28px,4.5vw,50px);color:var(--white);line-height:1.35;margin-bottom:10px;font-weight:900}
+.hero-title em{color:var(--gold-light);font-style:normal}
+.hero-sub{font-size:clamp(13px,2vw,17px);color:rgba(255,255,255,.5);margin-bottom:30px}
+.verse-box{border-left:3px solid var(--gold);padding:14px 20px;margin-bottom:36px;background:rgba(196,154,34,.07);border-radius:0 8px 8px 0}
+.verse-box p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.8;font-style:italic}
+.verse-box cite{font-size:11px;color:var(--gold);margin-top:4px;display:block}
+.hero-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.95;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);padding:13px 28px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,154,34,.3)}
+.btn-outline{border:1px solid rgba(255,255,255,.28);color:var(--white);padding:13px 28px;border-radius:8px;font-weight:500;font-size:14px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light)}
+.hero-right{animation:fadeUp .9s .2s ease both;display:flex;flex-direction:column;gap:14px}
+.info-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 22px;display:flex;align-items:center;gap:16px;transition:all .3s}
+.info-card:hover{border-color:rgba(42,140,82,.4);background:rgba(42,140,82,.08)}
+.info-icon{width:46px;height:46px;border-radius:11px;background:rgba(42,140,82,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.info-title{font-size:14px;color:var(--white);font-weight:700;margin-bottom:2px}
+.info-sub{font-size:12px;color:rgba(255,255,255,.5)}
+
+.warmth{background:var(--green-light);padding:68px 5%;text-align:center}
+.warmth-inner{max-width:740px;margin:0 auto}
+.warmth h2{font-family:'Noto Serif KR',serif;font-size:clamp(20px,3vw,30px);color:var(--green-deep);margin-bottom:18px;font-weight:700;line-height:1.55}
+.divider{width:52px;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));margin:18px auto;border-radius:2px}
+.warmth p{font-size:14.5px;color:#3A5540;line-height:2}
+
+.sec-label{display:inline-block;font-size:11px;letter-spacing:2px;color:var(--green);font-weight:700;text-transform:uppercase;margin-bottom:10px}
+.sec-inner{max-width:1200px;margin:0 auto}
+
+.ministry-sec{padding:96px 5%;background:var(--white)}
+.ministry-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,3vw,36px);color:var(--green-deep);font-weight:900;margin-bottom:12px;line-height:1.4}
+.ministry-sec .sub{font-size:14.5px;color:var(--gray);line-height:1.85;margin-bottom:52px;max-width:600px}
+.m-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.m-card{border-radius:16px;overflow:hidden;border:1px solid rgba(26,107,58,.1);transition:all .3s;background:var(--white)}
+.m-card:hover{box-shadow:0 12px 40px rgba(26,107,58,.14);transform:translateY(-5px)}
+.m-card-top{padding:28px 24px 20px;background:var(--green-pale)}
+.m-flag{font-size:36px;margin-bottom:14px}
+.m-card-top h3{font-family:'Noto Serif KR',serif;font-size:17px;color:var(--green-deep);font-weight:700;margin-bottom:8px}
+.m-tag{display:inline-block;background:rgba(26,107,58,.12);color:var(--green);padding:3px 11px;border-radius:12px;font-size:11px;font-weight:600;margin-bottom:12px}
+.m-card-body{padding:18px 24px 22px}
+.m-card-body p{font-size:13px;color:#4A6450;line-height:1.85;margin-bottom:14px}
+.m-detail{font-size:12px;color:var(--gray);line-height:1.75;padding:10px 12px;background:var(--off);border-radius:8px;margin-bottom:14px}
+.m-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--green);text-decoration:none;font-weight:700;transition:gap .2s}
+.m-link:hover{gap:9px}
+
+.pastor-sec{padding:88px 5%;background:var(--green-deep)}
+.pastor-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:center}
+.pastor-info .sec-label{color:var(--gold-light)}
+.pastor-info h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,3.5vw,36px);color:var(--white);font-weight:900;margin-bottom:6px}
+.pastor-role{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px;line-height:1.85}
+.pastor-info p{font-size:14px;color:rgba(255,255,255,.62);line-height:1.95;margin-bottom:20px}
+.career-list{display:flex;flex-direction:column;gap:8px}
+.career-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.55)}
+.career-icon{color:var(--gold-light);flex-shrink:0}
+
+.programs{padding:88px 5%;background:var(--off)}
+.programs h2{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3vw,34px);color:var(--green-deep);font-weight:900;margin-bottom:46px}
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.prog-card{background:var(--white);border-radius:14px;padding:26px;border:1px solid rgba(26,107,58,.08);transition:all .3s}
+.prog-card:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(26,107,58,.1)}
+.prog-icon{font-size:30px;margin-bottom:14px}
+.prog-card h3{font-size:15px;color:var(--green-deep);font-weight:700;margin-bottom:8px}
+.prog-card p{font-size:12.5px;color:var(--gray);line-height:1.75}
+
+.support-sec{padding:88px 5%;background:linear-gradient(135deg,var(--green-deep) 0%,#0A2D1A 100%);text-align:center}
+.support-inner{max-width:780px;margin:0 auto}
+.support-sec .sec-label{color:var(--gold-light)}
+.support-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3.5vw,36px);color:var(--white);font-weight:900;margin-bottom:18px;line-height:1.45}
+.support-sec p{font-size:14.5px;color:rgba(255,255,255,.58);line-height:1.95;margin-bottom:36px}
+.support-cards{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.s-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:24px 28px;text-align:center;text-decoration:none;transition:all .3s;min-width:160px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.s-card:hover{border-color:var(--gold);background:rgba(196,154,34,.08);transform:translateY(-3px)}
+.s-card .si{font-size:26px}
+.s-card .sl{font-size:11px;color:rgba(255,255,255,.4)}
+.s-card .sv{font-size:14px;color:var(--white);font-weight:600}
+
+footer{background:#050F09;padding:44px 5% 26px;border-top:1px solid rgba(26,107,58,.2)}
+.ft-inner{max-width:1200px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.ft-brand h3{font-family:'Noto Serif KR',serif;font-size:18px;color:var(--white);margin-bottom:10px}
+.ft-brand p{font-size:12px;color:rgba(255,255,255,.35);line-height:1.9}
+.ft-col h4{font-size:11px;color:var(--green-mid);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:13px}
+.ft-col a{display:block;font-size:12.5px;color:rgba(255,255,255,.38);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.ft-col a:hover{color:var(--white)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:11px;color:rgba(255,255,255,.2)}
+.ft-mission{font-size:11px;color:rgba(196,154,34,.42);font-style:italic}
+
+.seo-sec{padding:64px 5%;background:var(--white)}
+.seo-inner{max-width:960px;margin:0 auto}
+.seo-inner h2{font-family:'Noto Serif KR',serif;font-size:24px;color:var(--green-deep);font-weight:700;margin-bottom:32px}
+.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.seo-col h3{font-size:12px;color:var(--green);font-weight:700;margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+.kw-list{display:flex;flex-wrap:wrap;gap:7px}
+.kw{background:var(--green-pale);color:var(--green-deep);padding:5px 13px;border-radius:20px;font-size:12px;border:1px solid transparent;transition:all .2s}
+.kw:hover{border-color:var(--green);background:var(--green-light)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.hero-content{grid-template-columns:1fr}.hero-right{display:none}.pastor-inner{grid-template-columns:1fr}.ft-top{grid-template-columns:1fr}.nav-links{display:none}.seo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">✝</div>
+    <div>
+      <span class="nav-logo-kr">엘림G선교회</span>
+      <span class="nav-logo-sub">Elim G Mission | elimg.kr</span>
+    </div>
+  </a>
+  <div style="display:flex;align-items:center;gap:20px">
+    <div class="nav-links">
+      <a href="#ministry">사역 현장</a>
+      <a href="#pastor">대표 소개</a>
+      <a href="#programs">교육 프로그램</a>
+      <a href="#support">후원·기도</a>
+      <a href="https://elimg.com" target="_blank" style="color:rgba(196,154,34,.8);font-size:12px">AI 비즈니스 ↗</a>
+      <a href="#support" class="btn-nav">후원 문의</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="badge"><div class="dot"></div>부산남부노회 공식 파송 | 김해·기장·거제·글로벌</div>
+      <h1 class="hero-title">이주민의 삶 가운데<br><em>하나님의 사랑</em>을 전합니다</h1>
+      <p class="hero-sub">엘림G선교회 — Elim G Mission</p>
+      <div class="verse-box">
+        <p>"나그네를 대접하며 성도들의 쓸 것을 공급하며 박해하는 자를 위하여 기도하라"</p>
+        <cite>— 로마서 12:13</cite>
+      </div>
+      <p class="hero-desc">30년간 김해·부산·거제 이주민의 곁에 함께했습니다.<br>네팔·베트남·미얀마 등 18개국 이주민 공동체와 함께 하나님 나라를 만들어가고 있습니다.</p>
+      <div class="hero-btns">
+        <a href="#ministry" class="btn-primary">✦ 사역 현장 보기</a>
+        <a href="https://elimg.com" class="btn-outline" target="_blank">AI 비즈니스 →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="info-card"><div class="info-icon">🇳🇵</div><div><div class="info-title">네팔 한국어반</div><div class="info-sub">김해·거제 한화오션 근로자 한국어 교육</div></div></div>
+      <div class="info-card"><div class="info-icon">🇻🇳</div><div><div class="info-title">베트남 설교·상담 사역</div><div class="info-sub">메콩성경아카데미 연계 사역</div></div></div>
+      <div class="info-card"><div class="info-icon">⚓</div><div><div class="info-title">거제 한화오션 해외근로자</div><div class="info-sub">조선업 이주민 한국어·법무 사역</div></div></div>
+      <div class="info-card"><div class="info-icon">🌿</div><div><div class="info-title">기장 이주민 사역</div><div class="info-sub">부산 기장 다문화 가정 지원</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="warmth">
+  <div class="warmth-inner reveal">
+    <h2>그들이 낯선 땅에서 혼자가 아니도록</h2>
+    <div class="divider"></div>
+    <p>엘림G선교회는 30년간 이주민의 언어를 배우고, 그들의 문화를 이해하며, 그들의 눈물을 함께 닦아왔습니다.<br>하나님이 우리에게 주신 이웃은 바로 이 땅의 이주민들입니다.<br>우리는 AI 기술을 도구로 삼아 더 넓게, 더 빠르게, 더 깊이 그들을 섬깁니다.</p>
+  </div>
+</section>
+
+<section class="ministry-sec" id="ministry">
+  <div class="sec-inner">
+    <span class="sec-label reveal">MINISTRY FIELDS</span>
+    <h2 class="reveal">4대 사역 현장</h2>
+    <p class="sub reveal">각 사역 현장은 이주민의 삶과 맞닿아 있습니다. 언어·법무·신앙·생활 전반을 섬깁니다.</p>
+    <div class="m-grid">
+      <div class="m-card reveal">
+        <div class="m-card-top">
+          <div class="m-flag">🇳🇵</div>
+          <span class="m-tag">언어교육</span>
+          <h3>네팔 한국어반</h3>
+        </div>
+        <div class="m-card-body">
+          <p>김해와 거제 지역 네팔 이주민 근로자들을 위한 한국어 교육 사역입니다. AI 기반 학습 자료와 현장 교사를 연결하여 실생활 한국어 역량을 키웁니다.</p>
+          <div class="m-detail">📍 대상: 김해·거제 네팔 근로자<br>📚 내용: 생활 한국어, 업무 한국어, KIIP 연계<br>🤖 AI 활용: 맞춤형 학습 자료 자동 생성</div>
+          <a href="#support" class="m-link">함께하기 →</a>
+        </div>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-card-top">
+          <div class="m-flag">🇻🇳</div>
+          <span class="m-tag">설교·상담</span>
+          <h3>베트남 설교·상담 사역</h3>
+        </div>
+        <div class="m-card-body">
+          <p>베트남어로 직접 설교하고 상담하는 사역입니다. 메콩성경아카데미와 연계하여 베트남 이주민 공동체의 신앙과 생활을 함께 섬깁니다.</p>
+          <div class="m-detail">📍 대상: 부울경 베트남 이주민<br>✝ 내용: 베트남어 설교, 가정 상담, 성경 공부<br>🌏 연계: 메콩성경아카데미 (베트남 현지)</div>
+          <a href="#support" class="m-link">함께하기 →</a>
+        </div>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-card-top">
+          <div class="m-flag">⚓</div>
+          <span class="m-tag">산업선교</span>
+          <h3>거제 한화오션 해외근로자 한국어 사역</h3>
+        </div>
+        <div class="m-card-body">
+          <p>거제 한화오션 조선소의 해외 근로자들을 위한 한국어 사역입니다. 산업 현장의 특수성을 고려한 맞춤형 한국어와 법무 지원을 제공합니다.</p>
+          <div class="m-detail">📍 대상: 거제 한화오션 해외 근로자<br>🔧 내용: 조선업 한국어, 안전교육, 비자·노동법 안내<br>🤝 연계: 기업 협력, 노무사 연결</div>
+          <a href="#support" class="m-link">함께하기 →</a>
+        </div>
+      </div>
+      <div class="m-card reveal">
+        <div class="m-card-top">
+          <div class="m-flag">🌿</div>
+          <span class="m-tag">다문화 지원</span>
+          <h3>기장 이주민 사역</h3>
+        </div>
+        <div class="m-card-body">
+          <p>부산 기장 지역 이주민 센터와 연계한 다문화 가정 지원 사역입니다. 법무·행정·생활 전반을 함께 섬기며 하나님의 사랑을 전합니다.</p>
+          <div class="m-detail">📍 대상: 부산 기장 이주민·다문화 가정<br>💚 내용: 비자 상담, 다국어 생활 안내, 가족 돌봄<br>🏠 연계: 기장이주민센터, 참빛힐링센터</div>
+          <a href="#support" class="m-link">함께하기 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pastor-sec" id="pastor">
+  <div class="pastor-inner sec-inner">
+    <div style="width:100%;aspect-ratio:3/4;border-radius:16px;background:rgba(42,140,82,.15);border:2px solid rgba(196,154,34,.3);display:flex;align-items:center;justify-content:center;font-size:72px;color:rgba(255,255,255,.12)" class="reveal">✝</div>
+    <div class="pastor-info reveal">
+      <span class="sec-label">REPRESENTATIVE</span>
+      <h2>한진준 대표</h2>
+      <p class="pastor-role">엘림G선교회 대표 | 글로컬브릿지연구소 소장<br>부산남부노회 공식 파송 이주민 선교사<br>CBMC 김해한마음지회 지도목사</p>
+      <p>30년 이상 이주민의 삶 가운데 함께하며, 성경 66권을 연구하고 설교해왔습니다. 베트남·태국·네팔 등 18개국 이주민 공동체를 섬기며, 글로컬(glocal) 관점으로 지역과 세계를 연결하는 사역 철학을 추구합니다.</p>
+      <div class="career-list">
+        <div class="career-item"><span class="career-icon">✦</span><span>부산남부노회 공식 파송 이주민 선교사</span></div>
+        <div class="career-item"><span class="career-icon">✦</span><span>CBMC 김해한마음지회 지도목사</span></div>
+        <div class="career-item"><span class="career-icon">✦</span><span>글로컬브릿지연구소 소장</span></div>
+        <div class="career-item"><span class="career-icon">✦</span><span>베트남 메콩성경아카데미 연계 사역</span></div>
+        <div class="career-item"><span class="career-icon">✦</span><span>태국 카렌족 목회자 세미나 강사</span></div>
+        <div class="career-item"><span class="career-icon">✦</span><span>글로컬 AI 아카데미 60주 커리큘럼 개발</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="sec-inner">
+    <span class="sec-label reveal">PROGRAMS</span>
+    <h2 class="reveal">교육 및 훈련 프로그램</h2>
+    <div class="prog-grid">
+      <div class="prog-card reveal"><div class="prog-icon">📖</div><h3>글로컬 성경통독 313일</h3><p>이주민과 함께하는 성경 전체 통독 프로그램. AI 다국어 해설 지원.</p></div>
+      <div class="prog-card reveal"><div class="prog-icon">💡</div><h3>임팩트66 성경암송</h3><p>성경 66권 핵심 말씀 암송 프로그램. 이주민 신앙 성장의 기반.</p></div>
+      <div class="prog-card reveal"><div class="prog-icon">🌏</div><h3>MIGRANT56 프로그램</h3><p>이주민을 위한 56주 신앙·생활 통합 교육 커리큘럼.</p></div>
+      <div class="prog-card reveal"><div class="prog-icon">🤖</div><h3>글로컬 AI 아카데미 60주</h3><p>AI 기술과 성경 66권을 통합한 이주민 사역자 훈련 과정.</p></div>
+      <div class="prog-card reveal"><div class="prog-icon">🇰🇷</div><h3>KIIP 한국어 교육</h3><p>법무부 사회통합프로그램 연계 한국어 교육. AI 학습 자료 병행.</p></div>
+      <div class="prog-card reveal"><div class="prog-icon">💼</div><h3>CBMC 비즈니스 원칙 12모듈</h3><p>성경적 비즈니스 원리로 이주민 창업·취업 역량 강화.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seo-sec">
+  <div class="seo-inner">
+    <h2 class="reveal">이런 분들을 섬깁니다</h2>
+    <div class="seo-grid">
+      <div class="seo-col reveal">
+        <h3>elimg.kr 핵심 키워드</h3>
+        <div class="kw-list">
+          <span class="kw">이주민 선교</span><span class="kw">네팔 한국어 교육</span>
+          <span class="kw">베트남 이주민 상담</span><span class="kw">기장이주민센터</span>
+          <span class="kw">거제 한화오션 외국인</span><span class="kw">엘림G선교회</span>
+          <span class="kw">다문화 가정 지원</span><span class="kw">이주민 비자 상담</span>
+          <span class="kw">KIIP 사회통합</span><span class="kw">글로컬브릿지</span>
+        </div>
+      </div>
+      <div class="seo-col reveal">
+        <h3>사역 지역 키워드</h3>
+        <div class="kw-list">
+          <span class="kw">김해 이주민</span><span class="kw">부산 다문화</span>
+          <span class="kw">거제 외국인 근로자</span><span class="kw">부울경 이주민</span>
+          <span class="kw">메콩성경아카데미</span><span class="kw">태국 카렌족</span>
+          <span class="kw">한진준 대표</span><span class="kw">부산남부노회</span>
+          <span class="kw">참빛힐링센터</span><span class="kw">이주민 법무 무료</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="support-sec" id="support">
+  <div class="support-inner">
+    <span class="sec-label">PRAYER &amp; SUPPORT</span>
+    <h2 class="reveal">함께 이 사역을 감당해 주십시오</h2>
+    <p class="reveal">"너희가 여기 내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라" — 마태복음 25:40<br><br>기도와 후원으로 이주민 사역을 함께 이어갑니다.</p>
+    <div class="support-cards">
+      <a href="https://pf.kakao.com/_YIULn" class="s-card reveal" target="_blank"><div class="si">💬</div><div class="sl">카카오 채널</div><div class="sv">엘림G선교회</div></a>
+      <a href="tel:+821020833106" class="s-card reveal"><div class="si">📞</div><div class="sl">전화 문의</div><div class="sv">010-2083-3106</div></a>
+      <a href="mailto:kodhjj@gmail.com" class="s-card reveal"><div class="si">✉</div><div class="sl">이메일</div><div class="sv">kodhjj@gmail.com</div></a>
+      <a href="https://elimg.com" class="s-card reveal" target="_blank"><div class="si">🤖</div><div class="sl">AI 비즈니스</div><div class="sv">elimg.com</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <h3>엘림G선교회</h3>
+        <p>대표: 한진준 | 부산남부노회 공식 파송 이주민 선교사<br>CBMC 김해한마음지회 지도목사 | 글로컬브릿지연구소 소장<br>경상남도 김해시 | elimg.kr<br>
+        📞 010-2083-3106 | ✉ kodhjj@gmail.com</p>
+      </div>
+      <div class="ft-col">
+        <h4>사역 현장</h4>
+        <a href="#ministry">네팔 한국어반</a>
+        <a href="#ministry">베트남 설교·상담</a>
+        <a href="#ministry">거제 한화오션</a>
+        <a href="#ministry">기장 이주민</a>
+      </div>
+      <div class="ft-col">
+        <h4>연결</h4>
+        <a href="https://elimg.com" target="_blank">AI 비즈니스 (elimg.com)</a>
+        <a href="#programs">교육 프로그램</a>
+        <a href="#support">후원·기도 동참</a>
+        <a href="https://youtube.com/@glocalbridge" target="_blank">YouTube</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 엘림G선교회. All rights reserved. | elimg.kr</p>
+      <p class="ft-mission">"이주민의 삶 가운데 하나님의 사랑을 — Serving Immigrants with God's Love"</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*70); });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.background=
+    window.scrollY>60?'rgba(5,15,9,0.98)':'rgba(15,64,40,0.96)';
+});
+</script>
+</body>
+</html>
