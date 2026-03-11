@@ -155,6 +155,50 @@ footer{background:#050F09;padding:44px 5% 26px;border-top:1px solid rgba(26,107,
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* ── 통합 포털 ── */
+.portal-sec{padding:80px 5%;background:linear-gradient(180deg,#E8F5EE 0%,#fff 100%)}
+.portal-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3vw,34px);color:var(--green-deep);font-weight:900;margin-bottom:8px}
+.portal-sub{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:8px}
+.portal-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.portal-stat{text-align:center;padding:10px 18px;background:rgba(15,64,40,.06);border-radius:10px}
+.portal-stat .ps-num{font-family:'Noto Serif KR',serif;font-size:28px;font-weight:900;color:var(--green-deep)}
+.portal-stat .ps-label{font-size:11px;color:var(--gray)}
+.portal-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+.portal-tab{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(26,107,58,.2);background:#fff;color:var(--green);transition:all .2s}
+.portal-tab:hover,.portal-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+.portal-tab .tab-count{font-size:10px;opacity:.7;margin-left:4px}
+.portal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.portal-card{background:#fff;border-radius:12px;padding:16px 18px;border-left:4px solid var(--green);box-shadow:0 2px 8px rgba(0,0,0,.05);transition:all .25s;text-decoration:none;color:inherit;display:block}
+.portal-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,64,40,.12)}
+.portal-card.cat-mission{border-color:#2E7D32}
+.portal-card.cat-cbmc{border-color:#6A1B9A}
+.portal-card.cat-biz{border-color:#1565C0}
+.portal-card.cat-bible{border-color:#00695C}
+.portal-card.cat-partner{border-color:#E65100}
+.portal-card.cat-platform{border-color:#546E7A}
+.portal-card.cat-bridge{border-color:#0277BD}
+.portal-card.cat-variant{border-color:#78909C}
+.portal-card.cat-dead{border-color:#B71C1C;opacity:.5}
+.pc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.pc-name{font-size:14px;font-weight:700;color:var(--green-deep)}
+.pc-badge{font-size:9px;padding:2px 7px;border-radius:8px;color:#fff;font-weight:600}
+.cat-mission .pc-badge{background:#2E7D32}
+.cat-cbmc .pc-badge{background:#6A1B9A}
+.cat-biz .pc-badge{background:#1565C0}
+.cat-bible .pc-badge{background:#00695C}
+.cat-partner .pc-badge{background:#E65100}
+.cat-platform .pc-badge{background:#546E7A}
+.cat-bridge .pc-badge{background:#0277BD}
+.cat-variant .pc-badge{background:#78909C}
+.cat-dead .pc-badge{background:#B71C1C}
+.pc-desc{font-size:11.5px;color:#666;line-height:1.6;margin-bottom:6px}
+.pc-url{font-size:10px;color:var(--green);font-weight:600;word-break:break-all}
+.portal-card.hidden{display:none}
+.portal-toggle{margin-top:18px;text-align:center}
+.portal-toggle button{background:none;border:1px solid rgba(26,107,58,.3);color:var(--green);padding:8px 20px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.portal-toggle button:hover{background:var(--green);color:#fff}
+
 @media(max-width:900px){.hero-content{grid-template-columns:1fr}.hero-right{display:none}.pastor-inner{grid-template-columns:1fr}.ft-top{grid-template-columns:1fr}.nav-links{display:none}.seo-grid{grid-template-columns:1fr}}
 
 /* ── 히어로 슬라이드 ── */
@@ -314,6 +358,7 @@ footer{background:#050F09;padding:44px 5% 26px;border-top:1px solid rgba(26,107,
     <div class="nav-links">
       <a href="#ministry">사역 현장</a>
       <a href="#programs">교육 프로그램</a>
+      <a href="#portal">통합 포털</a>
       <a href="#notice">기도·공지</a>
       <a href="#account">후원하기</a>
       <a href="#pastor">대표 소개</a>
@@ -327,6 +372,7 @@ footer{background:#050F09;padding:44px 5% 26px;border-top:1px solid rgba(26,107,
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#ministry" onclick="closeMenu()">✦ 사역 현장</a>
   <a href="#programs" onclick="closeMenu()">📚 교육 프로그램</a>
+  <a href="#portal" onclick="closeMenu()">🌐 통합 포털</a>
   <a href="#notice" onclick="closeMenu()">🙏 기도·공지</a>
   <a href="#youtube" onclick="closeMenu()">▶ 글로컬브릿지 YouTube</a>
   <a href="#account" onclick="closeMenu()">💚 후원하기</a>
@@ -648,6 +694,549 @@ footer{background:#050F09;padding:44px 5% 26px;border-top:1px solid rgba(26,107,
           📅 운영: 월 1회 세미나<br>🤝 연계: CBMC 김해한마음지회<br>💡 내용: 창업·취업·비즈니스 원칙
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 통합 포털 ═══ -->
+<section class="portal-sec" id="portal">
+  <div class="sec-inner">
+    <span class="sec-label reveal">ELIM-G PORTAL</span>
+    <h2 class="reveal">엘림G 글로컬브릿지 통합 포털</h2>
+    <p class="portal-sub reveal">안방에서 열방을 잇는 글로컬 선교 플랫폼 — 105개 사이트 전체 네트워크</p>
+    <div class="portal-stats reveal">
+      <div class="portal-stat"><div class="ps-num">105</div><div class="ps-label">전체 사이트</div></div>
+      <div class="portal-stat"><div class="ps-num">96</div><div class="ps-label">활성 (200 OK)</div></div>
+      <div class="portal-stat"><div class="ps-num">9</div><div class="ps-label">카테고리</div></div>
+      <div class="portal-stat"><div class="ps-num">7+</div><div class="ps-label">국가</div></div>
+    </div>
+    <div class="portal-tabs reveal">
+      <span class="portal-tab active" data-cat="all">전체<span class="tab-count">105</span></span>
+      <span class="portal-tab" data-cat="mission">선교사역<span class="tab-count">8</span></span>
+      <span class="portal-tab" data-cat="cbmc">CBMC/교회<span class="tab-count">11</span></span>
+      <span class="portal-tab" data-cat="biz">비즈니스/AI<span class="tab-count">8</span></span>
+      <span class="portal-tab" data-cat="bible">성경/콘텐츠<span class="tab-count">13</span></span>
+      <span class="portal-tab" data-cat="partner">파트너/기타<span class="tab-count">8</span></span>
+      <span class="portal-tab" data-cat="platform">플랫폼/허브<span class="tab-count">23</span></span>
+      <span class="portal-tab" data-cat="bridge">브릿지 변형<span class="tab-count">13</span></span>
+      <span class="portal-tab" data-cat="variant">번호/변형<span class="tab-count">19</span></span>
+      <span class="portal-tab" data-cat="dead">비활성<span class="tab-count">2</span></span>
+    </div>
+    <div class="portal-grid" id="portalGrid">
+
+      <!-- ── 핵심 메인 (mission) ── -->
+      <a href="https://elimg.kr" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">elimg.kr</span><span class="pc-badge">메인</span></div>
+        <div class="pc-desc">엘림G선교회 공식 사이트 — 이주민 사역 본부</div>
+        <div class="pc-url">elimg.kr</div>
+      </a>
+      <a href="https://elimg.com" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">elimg.com</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">GlocalBridge AI 컨설팅 — AI 비즈니스 본부</div>
+        <div class="pc-url">elimg.com</div>
+      </a>
+
+      <!-- ── 선교 사역 ── -->
+      <a href="https://glocalbridge-np.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬브릿지 네팔</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">네팔 한국어반 및 이주민 사역</div>
+        <div class="pc-url">glocalbridge-np.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-vn.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬브릿지 베트남</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">베트남 설교·상담 사역, 메콩아카데미</div>
+        <div class="pc-url">glocalbridge-vn.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-thai.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬브릿지 태국</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">태국 카렌족 사역</div>
+        <div class="pc-url">glocalbridge-thai.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-lk.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬브릿지 스리랑카</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">스리랑카 한국어반 사역</div>
+        <div class="pc-url">glocalbridge-lk.netlify.app</div>
+      </a>
+      <a href="https://ai-glocal-chinese-korean.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">중국어권 사역</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">중국어권 이주민 AI 한국어 교육</div>
+        <div class="pc-url">ai-glocal-chinese-korean.netlify.app</div>
+      </a>
+      <a href="https://geoje.elimg.kr" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">거제 한화오션</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">거제 조선소 해외근로자 한국어 사역</div>
+        <div class="pc-url">geoje.elimg.kr</div>
+      </a>
+      <a href="https://gimhae.elimg.kr" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">김해 취업 매칭</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">김해 이주민 취업 정보 플랫폼</div>
+        <div class="pc-url">gimhae.elimg.kr</div>
+      </a>
+      <a href="https://elimg-gijang.netlify.app" class="portal-card cat-mission" data-cat="mission" target="_blank">
+        <div class="pc-head"><span class="pc-name">기장 이주민 사역</span><span class="pc-badge">선교</span></div>
+        <div class="pc-desc">기장·정관·장안 이주민 사역</div>
+        <div class="pc-url">elimg-gijang.netlify.app</div>
+      </a>
+
+      <!-- ── CBMC / 교회 ── -->
+      <a href="https://gimhae-cbmc.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">CBMC 김해 (메인)</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 한마음지회 공식</div>
+        <div class="pc-url">gimhae-cbmc.netlify.app</div>
+      </a>
+      <a href="https://cbmc-biz-bridge.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">CBMC 비즈 브릿지</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 비즈니스 네트워크 연결</div>
+        <div class="pc-url">cbmc-biz-bridge.netlify.app</div>
+      </a>
+      <a href="https://cbmc-hanmaeum-v3.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">한마음지회 V3</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 한마음지회 최신 버전</div>
+        <div class="pc-url">cbmc-hanmaeum-v3.netlify.app</div>
+      </a>
+      <a href="https://cbmc-gimhae.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">CBMC 김해 정보</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 지역 정보 사이트</div>
+        <div class="pc-url">cbmc-gimhae.netlify.app</div>
+      </a>
+      <a href="https://hanmaum-schedule.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">한마음 일정</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">한마음지회 일정 관리</div>
+        <div class="pc-url">hanmaum-schedule.netlify.app</div>
+      </a>
+      <a href="https://cbmc-gimhae-hanmaeum.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">CBMC 김해 한마음</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 한마음 기존 버전</div>
+        <div class="pc-url">cbmc-gimhae-hanmaeum.netlify.app</div>
+      </a>
+      <a href="https://cbmc-gimhae-hanmaeum1.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">CBMC 김해 한마음 V1</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 한마음 초기 버전</div>
+        <div class="pc-url">cbmc-gimhae-hanmaeum1.netlify.app</div>
+      </a>
+      <a href="https://cbmc-hanmaeum-v2.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">한마음지회 V2</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">CBMC 김해 한마음지회 V2</div>
+        <div class="pc-url">cbmc-hanmaeum-v2.netlify.app</div>
+      </a>
+      <a href="https://bylaw-hanmaum.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">한마음 회칙</span><span class="pc-badge">CBMC</span></div>
+        <div class="pc-desc">한마음지회 회칙·규정</div>
+        <div class="pc-url">bylaw-hanmaum.netlify.app</div>
+      </a>
+      <a href="https://elimg-chambit.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">참빛교회</span><span class="pc-badge">교회</span></div>
+        <div class="pc-desc">참빛힐링센터 연계 사역</div>
+        <div class="pc-url">elimg-chambit.netlify.app</div>
+      </a>
+      <a href="https://elimg-healing.netlify.app" class="portal-card cat-cbmc" data-cat="cbmc" target="_blank">
+        <div class="pc-head"><span class="pc-name">힐링 사역</span><span class="pc-badge">교회</span></div>
+        <div class="pc-desc">치유·회복 사역 플랫폼</div>
+        <div class="pc-url">elimg-healing.netlify.app</div>
+      </a>
+
+      <!-- ── 비즈니스 / AI ── -->
+      <a href="https://elimg-com-main.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">GlocalBridge AI (메인)</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">글로컬브릿지 AI 컨설팅 메인</div>
+        <div class="pc-url">elimg-com-main.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-jobs.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬 취업 매칭</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">이주민-기업 취업 매칭 플랫폼</div>
+        <div class="pc-url">glocalbridge-jobs.netlify.app</div>
+      </a>
+      <a href="https://glocal-ai-academy.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">AI 아카데미</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">글로컬 AI 아카데미 60주 과정</div>
+        <div class="pc-url">glocal-ai-academy.netlify.app</div>
+      </a>
+      <a href="https://glocal-talent.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">인재 매칭</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">글로컬 인재 매칭 서비스</div>
+        <div class="pc-url">glocal-talent.netlify.app</div>
+      </a>
+      <a href="https://global-mig.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로벌 이주</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">글로벌 이주민 정보 플랫폼</div>
+        <div class="pc-url">global-mig.netlify.app</div>
+      </a>
+      <a href="https://gimhae-info.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">김해 생활 정보</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">김해 지역 생활 정보</div>
+        <div class="pc-url">gimhae-info.netlify.app</div>
+      </a>
+      <a href="https://gimhaelife-info.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">김해라이프 정보</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">김해 생활 종합 정보</div>
+        <div class="pc-url">gimhaelife-info.netlify.app</div>
+      </a>
+      <a href="https://glocal-chinese.netlify.app" class="portal-card cat-biz" data-cat="biz" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬 중국어</span><span class="pc-badge">비즈</span></div>
+        <div class="pc-desc">중국어 AI 교육 플랫폼</div>
+        <div class="pc-url">glocal-chinese.netlify.app</div>
+      </a>
+
+      <!-- ── 성경 / 콘텐츠 ── -->
+      <a href="https://elimgimpact-genesis.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT 창세기</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">창세기 심층 연구</div>
+        <div class="pc-url">elimgimpact-genesis.netlify.app</div>
+      </a>
+      <a href="https://elimgimpact-genesis01.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT 창세기 V1</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">창세기 연구 초기 버전</div>
+        <div class="pc-url">elimgimpact-genesis01.netlify.app</div>
+      </a>
+      <a href="https://elimgimpact-exodus.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT 출애굽기</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">출애굽기 심층 연구</div>
+        <div class="pc-url">elimgimpact-exodus.netlify.app</div>
+      </a>
+      <a href="https://elimgimpact-leviticus.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT 레위기</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">레위기 심층 연구</div>
+        <div class="pc-url">elimgimpact-leviticus.netlify.app</div>
+      </a>
+      <a href="https://impact-leviticus.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">레위기 연구</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">레위기 연구 보조 사이트</div>
+        <div class="pc-url">impact-leviticus.netlify.app</div>
+      </a>
+      <a href="https://impact-leviticus-study.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">레위기 스터디</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">레위기 스터디 그룹</div>
+        <div class="pc-url">impact-leviticus-study.netlify.app</div>
+      </a>
+      <a href="https://elimgimpact66.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT66</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">성경 66권 암송 프로그램</div>
+        <div class="pc-url">elimgimpact66.netlify.app</div>
+      </a>
+      <a href="https://impact126.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT126</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">성경 126 프로그램</div>
+        <div class="pc-url">impact126.netlify.app</div>
+      </a>
+      <a href="https://impact-bible.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">IMPACT Bible</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">임팩트 바이블 종합</div>
+        <div class="pc-url">impact-bible.netlify.app</div>
+      </a>
+      <a href="https://glocalbible.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬 바이블</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">글로컬 다국어 성경 플랫폼</div>
+        <div class="pc-url">glocalbible.netlify.app</div>
+      </a>
+      <a href="https://elimgbible.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 성경연구</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">엘림G 성경연구 플랫폼</div>
+        <div class="pc-url">elimgbible.netlify.app</div>
+      </a>
+      <a href="https://wilderness-way.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">광야길</span><span class="pc-badge">성경</span></div>
+        <div class="pc-desc">광야길 — 영적 순례 콘텐츠</div>
+        <div class="pc-url">wilderness-way.netlify.app</div>
+      </a>
+      <a href="https://korean-baby.netlify.app" class="portal-card cat-bible" data-cat="bible" target="_blank">
+        <div class="pc-head"><span class="pc-name">한국어 베이비</span><span class="pc-badge">교육</span></div>
+        <div class="pc-desc">이주민 자녀 한국어 기초 교육</div>
+        <div class="pc-url">korean-baby.netlify.app</div>
+      </a>
+
+      <!-- ── 파트너 / 기타 ── -->
+      <a href="https://hadong-elimg.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">하동 사역</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">하동 지역 사역 파트너</div>
+        <div class="pc-url">hadong-elimg.netlify.app</div>
+      </a>
+      <a href="https://grace-ok.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">은혜감사</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">은혜 간증·감사 사역</div>
+        <div class="pc-url">grace-ok.netlify.app</div>
+      </a>
+      <a href="https://graceok.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">GraceOK</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">은혜 사역 보조 사이트</div>
+        <div class="pc-url">graceok.netlify.app</div>
+      </a>
+      <a href="https://jungmil.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">정밀 사역</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">정밀 사역 콘텐츠</div>
+        <div class="pc-url">jungmil.netlify.app</div>
+      </a>
+      <a href="https://2026vision.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">2026 비전</span><span class="pc-badge">비전</span></div>
+        <div class="pc-desc">2026년 사역 비전 및 계획</div>
+        <div class="pc-url">2026vision.netlify.app</div>
+      </a>
+      <a href="https://koreabridge-np.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">코리아브릿지 네팔</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">한국-네팔 연결 브릿지</div>
+        <div class="pc-url">koreabridge-np.netlify.app</div>
+      </a>
+      <a href="https://green-mission.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">그린 미션</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">그린 선교 네트워크</div>
+        <div class="pc-url">green-mission.netlify.app</div>
+      </a>
+      <a href="https://green4-mission.netlify.app" class="portal-card cat-partner" data-cat="partner" target="_blank">
+        <div class="pc-head"><span class="pc-name">그린4 미션</span><span class="pc-badge">파트너</span></div>
+        <div class="pc-desc">그린 선교 확장 버전</div>
+        <div class="pc-url">green4-mission.netlify.app</div>
+      </a>
+
+      <!-- ── 플랫폼 / 허브 ── -->
+      <a href="https://elimghub.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 허브</span><span class="pc-badge">허브</span></div>
+        <div class="pc-desc">엘림G 통합 허브 플랫폼</div>
+        <div class="pc-url">elimghub.netlify.app</div>
+      </a>
+      <a href="https://elimgplatform.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 플랫폼</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 종합 플랫폼</div>
+        <div class="pc-url">elimgplatform.netlify.app</div>
+      </a>
+      <a href="https://elimgonestop.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">원스톱 서비스</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">이주민 원스톱 서비스</div>
+        <div class="pc-url">elimgonestop.netlify.app</div>
+      </a>
+      <a href="https://elimgmission.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 미션</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 선교 플랫폼</div>
+        <div class="pc-url">elimgmission.netlify.app</div>
+      </a>
+      <a href="https://elimgs.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGS</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 서비스 포털</div>
+        <div class="pc-url">elimgs.netlify.app</div>
+      </a>
+      <a href="https://elimgweb.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 웹</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 웹 버전</div>
+        <div class="pc-url">elimgweb.netlify.app</div>
+      </a>
+      <a href="https://elimgw.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGW</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 워크스페이스</div>
+        <div class="pc-url">elimgw.netlify.app</div>
+      </a>
+      <a href="https://elimgw01.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGW01</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 워크스페이스 V1</div>
+        <div class="pc-url">elimgw01.netlify.app</div>
+      </a>
+      <a href="https://elimg.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 기본 사이트</div>
+        <div class="pc-url">elimg.netlify.app</div>
+      </a>
+      <a href="https://elimg0.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG0</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 초기 버전</div>
+        <div class="pc-url">elimg0.netlify.app</div>
+      </a>
+      <a href="https://elimg01.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG01</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 버전 01</div>
+        <div class="pc-url">elimg01.netlify.app</div>
+      </a>
+      <a href="https://elimg1.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG1</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 버전 1</div>
+        <div class="pc-url">elimg1.netlify.app</div>
+      </a>
+      <a href="https://elimg50.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG50</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 버전 50</div>
+        <div class="pc-url">elimg50.netlify.app</div>
+      </a>
+      <a href="https://elimg66.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG66</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 66권 버전</div>
+        <div class="pc-url">elimg66.netlify.app</div>
+      </a>
+      <a href="https://elimgaa.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGAA</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G AA 버전</div>
+        <div class="pc-url">elimgaa.netlify.app</div>
+      </a>
+      <a href="https://elimgb.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGB</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G B 버전</div>
+        <div class="pc-url">elimgb.netlify.app</div>
+      </a>
+      <a href="https://elimgf.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGF</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G F 버전</div>
+        <div class="pc-url">elimgf.netlify.app</div>
+      </a>
+      <a href="https://elimgh.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMGH</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G H 버전</div>
+        <div class="pc-url">elimgh.netlify.app</div>
+      </a>
+      <a href="https://elimggmmc.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG GMMC</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 글로컬 미션 센터</div>
+        <div class="pc-url">elimggmmc.netlify.app</div>
+      </a>
+      <a href="https://elimggmmc1.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG GMMC1</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">글로컬 미션 센터 V1</div>
+        <div class="pc-url">elimggmmc1.netlify.app</div>
+      </a>
+      <a href="https://elimg-han.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 한</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">엘림G 한국어 사역 버전</div>
+        <div class="pc-url">elimg-han.netlify.app</div>
+      </a>
+      <a href="https://elimg-han01.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 한 V1</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">한국어 사역 초기 버전</div>
+        <div class="pc-url">elimg-han01.netlify.app</div>
+      </a>
+      <a href="https://elimg-han-sermon.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">설교 아카이브</span><span class="pc-badge">콘텐츠</span></div>
+        <div class="pc-desc">설교 자료 아카이브</div>
+        <div class="pc-url">elimg-han-sermon.netlify.app</div>
+      </a>
+      <a href="https://elimg-call.netlify.app" class="portal-card cat-platform" data-cat="platform" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 콜</span><span class="pc-badge">플랫폼</span></div>
+        <div class="pc-desc">소명·부르심 콘텐츠</div>
+        <div class="pc-url">elimg-call.netlify.app</div>
+      </a>
+
+      <!-- ── 브릿지 변형 ── -->
+      <a href="https://elimgbridge.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 브릿지</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 기본</div>
+        <div class="pc-url">elimgbridge.netlify.app</div>
+      </a>
+      <a href="https://elimgbridge2.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 V2</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 버전 2</div>
+        <div class="pc-url">elimgbridge2.netlify.app</div>
+      </a>
+      <a href="https://elimgbridge-dark.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 다크</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 다크 테마</div>
+        <div class="pc-url">elimgbridge-dark.netlify.app</div>
+      </a>
+      <a href="https://elimgbridge-dark2.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 다크 V2</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 다크 테마 V2</div>
+        <div class="pc-url">elimgbridge-dark2.netlify.app</div>
+      </a>
+      <a href="https://elimgbridge-light.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 라이트</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 라이트 테마</div>
+        <div class="pc-url">elimgbridge-light.netlify.app</div>
+      </a>
+      <a href="https://elimgbridge-en.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 영문</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">GlocalBridge English</div>
+        <div class="pc-url">elimgbridge-en.netlify.app</div>
+      </a>
+      <a href="https://elimg-bridge.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">엘림G 브릿지 (구)</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">엘림G 브릿지 기존 버전</div>
+        <div class="pc-url">elimg-bridge.netlify.app</div>
+      </a>
+      <a href="https://elimg-bridge1.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 V1</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">엘림G 브릿지 V1</div>
+        <div class="pc-url">elimg-bridge1.netlify.app</div>
+      </a>
+      <a href="https://glocal-bridge.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬 브릿지</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬 브릿지 포털</div>
+        <div class="pc-url">glocal-bridge.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-fusion.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 퓨전</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 퓨전 버전</div>
+        <div class="pc-url">glocalbridge-fusion.netlify.app</div>
+      </a>
+      <a href="https://glocalbridg-vn.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 베트남 (구)</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 베트남 이전 버전</div>
+        <div class="pc-url">glocalbridg-vn.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge-thai01.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">브릿지 태국 V1</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬브릿지 태국 초기 버전</div>
+        <div class="pc-url">glocalbridge-thai01.netlify.app</div>
+      </a>
+      <a href="https://glocalaa.netlify.app" class="portal-card cat-bridge" data-cat="bridge" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬AA</span><span class="pc-badge">브릿지</span></div>
+        <div class="pc-desc">글로컬 AA 버전</div>
+        <div class="pc-url">glocalaa.netlify.app</div>
+      </a>
+
+      <!-- ── 번호 / 변형 사이트 ── -->
+      <a href="https://elimg-p.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG-P</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">엘림G 프로토타입</div>
+        <div class="pc-url">elimg-p.netlify.app</div>
+      </a>
+      <a href="https://elimg-p1.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG-P1</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">프로토타입 V1</div>
+        <div class="pc-url">elimg-p1.netlify.app</div>
+      </a>
+      <a href="https://elimg-p2.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG-P2</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">프로토타입 V2</div>
+        <div class="pc-url">elimg-p2.netlify.app</div>
+      </a>
+      <a href="https://elimg-p3.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG-P3</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">프로토타입 V3</div>
+        <div class="pc-url">elimg-p3.netlify.app</div>
+      </a>
+      <a href="https://elimg-ai-korean.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">AI 한국어</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">AI 한국어 교육 변형</div>
+        <div class="pc-url">elimg-ai-korean.netlify.app</div>
+      </a>
+      <a href="https://elimg-aikorean.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">AI Korean</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">AI Korean 교육</div>
+        <div class="pc-url">elimg-aikorean.netlify.app</div>
+      </a>
+      <a href="https://elimg-src.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG SRC</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">소스 버전</div>
+        <div class="pc-url">elimg-src.netlify.app</div>
+      </a>
+      <a href="https://src-green.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">SRC Green</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">그린 소스 버전</div>
+        <div class="pc-url">src-green.netlify.app</div>
+      </a>
+      <a href="https://src-strong.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">SRC Strong</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">스트롱 소스 버전</div>
+        <div class="pc-url">src-strong.netlify.app</div>
+      </a>
+      <a href="https://gimhae1.netlify.app" class="portal-card cat-variant" data-cat="variant" target="_blank">
+        <div class="pc-head"><span class="pc-name">김해 V1</span><span class="pc-badge">변형</span></div>
+        <div class="pc-desc">김해 초기 버전</div>
+        <div class="pc-url">gimhae1.netlify.app</div>
+      </a>
+      <a href="https://glocalbridge.netlify.app" class="portal-card cat-dead" data-cat="dead" target="_blank">
+        <div class="pc-head"><span class="pc-name">글로컬브릿지 (404)</span><span class="pc-badge">비활성</span></div>
+        <div class="pc-desc">배포 없음 — 404 페이지</div>
+        <div class="pc-url">glocalbridge.netlify.app</div>
+      </a>
+      <a href="https://elimg10.netlify.app" class="portal-card cat-dead" data-cat="dead" target="_blank">
+        <div class="pc-head"><span class="pc-name">ELIMG10 (404)</span><span class="pc-badge">비활성</span></div>
+        <div class="pc-desc">배포 없음 — 404 페이지</div>
+        <div class="pc-url">elimg10.netlify.app</div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -1055,6 +1644,20 @@ function goSlide(n) {
   autoTimer = setInterval(() => changeSlide(1), 4500);
 }
 function changeSlide(dir) { goSlide(currentSlide + dir); }
+</script>
+
+<script>
+// ── 포털 탭 필터링 ──
+document.querySelectorAll('.portal-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.portal-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const cat = tab.dataset.cat;
+    document.querySelectorAll('.portal-card').forEach(card => {
+      card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
+    });
+  });
+});
 </script>
 
 </body>
