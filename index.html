@@ -76,12 +76,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .warmth-inner{max-width:740px;margin:0 auto}
 .warmth h2{font-family:'Noto Serif KR',serif;font-size:clamp(20px,3vw,30px);color:var(--green-deep);margin-bottom:18px;font-weight:700;line-height:1.55}
 .divider{width:52px;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));margin:18px auto;border-radius:2px}
-.warmth p{font-size:14.5px;color:#3A5540;line-height:2}
+.warmth p{font-size:14.5px;color:#3A4F5E;line-height:2}
 
 .sec-label{display:inline-block;font-size:11px;letter-spacing:2px;color:var(--green);font-weight:700;text-transform:uppercase;margin-bottom:10px}
 .sec-inner{max-width:1200px;margin:0 auto}
 
-.ministry-sec{padding:96px 5%;background:var(--white)}
+.ministry-sec{padding:72px 5%;background:var(--white)}
 .ministry-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(24px,3vw,36px);color:var(--green-deep);font-weight:900;margin-bottom:12px;line-height:1.4}
 .ministry-sec .sub{font-size:14.5px;color:var(--gray);line-height:1.85;margin-bottom:52px;max-width:600px}
 .m-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
@@ -180,13 +180,86 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
 .kw{background:var(--green-pale);color:var(--green-deep);padding:5px 13px;border-radius:20px;font-size:12px;border:1px solid transparent;transition:all .2s}
 .kw:hover{border-color:var(--green);background:var(--green-light)}
 
+
+/* ── 섹션 간 전환 배너 ── */
+.scripture-banner{padding:52px 5%;text-align:center;position:relative;overflow:hidden}
+.scripture-banner.dark{background:var(--green-deep);border-top:1px solid rgba(196,154,34,.15);border-bottom:1px solid rgba(196,154,34,.15)}
+.scripture-banner.light{background:linear-gradient(135deg,var(--green-light),var(--green-pale))}
+.scripture-banner.gold{background:linear-gradient(135deg,#1a0f00,#2a1800);border-top:1px solid rgba(196,154,34,.2);border-bottom:1px solid rgba(196,154,34,.2)}
+.sb-verse{font-family:'Noto Serif KR',serif;font-size:clamp(16px,2.5vw,22px);line-height:1.8;font-weight:600;margin-bottom:10px}
+.scripture-banner.dark .sb-verse{color:rgba(255,255,255,.85)}
+.scripture-banner.light .sb-verse{color:var(--green-deep)}
+.scripture-banner.gold .sb-verse{color:var(--gold-light)}
+.sb-ref{font-size:13px;font-weight:400}
+.scripture-banner.dark .sb-ref{color:var(--gold)}
+.scripture-banner.light .sb-ref{color:var(--green)}
+.scripture-banner.gold .sb-ref{color:rgba(255,255,255,.4)}
+.sb-deco{width:40px;height:2px;margin:0 auto 18px;border-radius:2px}
+.scripture-banner.dark .sb-deco{background:var(--gold)}
+.scripture-banner.light .sb-deco{background:var(--green)}
+.scripture-banner.gold .sb-deco{background:var(--gold)}
+
+/* ── 사역 타임라인 ── */
+.timeline-sec{padding:80px 5%;background:var(--white);border-top:2px solid rgba(46,107,158,.06)}
+.timeline-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3vw,34px);color:var(--green-deep);font-weight:900;margin-bottom:8px;text-align:center}
+.tl-track{max-width:800px;margin:48px auto 0;position:relative;padding-left:32px}
+.tl-track::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--green-mid),var(--gold),var(--green))}
+.tl-item{position:relative;padding:0 0 36px 28px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-28px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--green);border:3px solid var(--white);box-shadow:0 0 0 2px var(--green-mid);z-index:1}
+.tl-item:first-child .tl-dot{background:var(--gold);box-shadow:0 0 0 2px var(--gold-light)}
+.tl-item:last-child .tl-dot{background:var(--green-mid);box-shadow:0 0 0 2px var(--green)}
+.tl-year{font-family:'Noto Serif KR',serif;font-size:15px;font-weight:900;color:var(--green-deep);margin-bottom:4px}
+.tl-desc{font-size:13px;color:var(--gray);line-height:1.8}
+
+/* ── 참여 CTA 배너 ── */
+.cta-banner{padding:64px 5%;background:linear-gradient(135deg,var(--green),var(--green-mid));text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat}
+.cta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cta-banner h2{font-family:'Noto Serif KR',serif;font-size:clamp(20px,3vw,30px);color:var(--white);font-weight:900;margin-bottom:14px;line-height:1.5}
+.cta-banner p{font-size:14px;color:rgba(255,255,255,.8);line-height:1.85;margin-bottom:28px}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:all .3s}
+.cta-btn.primary{background:var(--white);color:var(--green-deep)}
+.cta-btn.primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.cta-btn.secondary{background:rgba(255,255,255,.12);color:var(--white);border:1px solid rgba(255,255,255,.25)}
+.cta-btn.secondary:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+
+/* ── 이미지 갤러리 스트립 ── */
+.gallery-strip{padding:0;overflow:hidden;background:var(--green-deep);position:relative}
+.gallery-strip::before{content:'사역 현장';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Noto Serif KR',serif;font-size:clamp(20px,3vw,28px);color:rgba(255,255,255,.9);z-index:2;text-shadow:0 2px 12px rgba(0,0,0,.5);letter-spacing:4px;font-weight:700;pointer-events:none}
+.gallery-strip::after{content:'';position:absolute;inset:0;background:rgba(27,58,92,.4);z-index:1}
+.gallery-row{display:flex;animation:galleryScroll 30s linear infinite}
+.gallery-row img{width:220px;height:160px;object-fit:cover;flex-shrink:0;filter:brightness(.85)}
+@keyframes galleryScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── 퀵 액세스 아이콘 바 ── */
+.quick-access{padding:42px 5%;background:var(--off);border-bottom:1px solid rgba(46,107,158,.06)}
+.qa-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.qa-item{text-align:center;text-decoration:none;transition:transform .2s}
+.qa-item:hover{transform:translateY(-4px)}
+.qa-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 8px;transition:box-shadow .3s}
+.qa-icon.blue{background:linear-gradient(135deg,#e8f0fa,#d5e4f5);box-shadow:0 4px 14px rgba(46,107,158,.12)}
+.qa-icon.gold{background:linear-gradient(135deg,#fdf5e6,#f5e6c8);box-shadow:0 4px 14px rgba(196,154,34,.12)}
+.qa-icon.green{background:linear-gradient(135deg,#e8f5e9,#d5ead7);box-shadow:0 4px 14px rgba(76,175,80,.12)}
+.qa-label{font-size:11px;color:var(--gray);font-weight:600}
+
+/* ── 반응형 보완 ── */
+@media(max-width:768px){
+  .tl-track{padding-left:24px}
+  .tl-item{padding-left:20px}
+  .qa-inner{gap:20px}
+  .qa-icon{width:48px;height:48px;font-size:20px}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 
 /* ── 통합 포털 ── */
-.portal-sec{padding:80px 5%;background:linear-gradient(180deg,#E8F5EE 0%,#fff 100%)}
+.portal-sec{padding:80px 5%;background:linear-gradient(180deg,var(--green-light) 0%,#fff 100%)}
 .portal-sec h2{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3vw,34px);color:var(--green-deep);font-weight:900;margin-bottom:8px}
 .portal-sub{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:8px}
 .portal-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px}
@@ -531,11 +604,11 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item">
-      <div class="stat-num"><span class="counter" data-target="30">0</span><span class="stat-unit">+</span></div>
+      <div class="stat-num"><span class="counter" data-target="37">0</span><span class="stat-unit">+</span></div>
       <div class="stat-label">사역 연수 (Years)</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num"><span class="counter" data-target="18">0</span><span class="stat-unit">개국</span></div>
+      <div class="stat-num"><span class="counter" data-target="10">0</span><span class="stat-unit">여개국</span></div>
       <div class="stat-label">이주민 국적</div>
     </div>
     <div class="stat-item">
@@ -556,6 +629,25 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
     <p>엘림G선교회는 오랜 세월 이주민의 언어를 배우고, 그들의 문화를 이해하며, 그들의 눈물을 함께 닦아왔습니다.<br>하나님이 우리에게 주신 이웃은 바로 이 땅의 이주민들입니다.<br>우리는 AI 기술을 도구로 삼아 더 넓게, 더 빠르게, 더 깊이 그들을 섬깁니다.</p>
   </div>
 </section>
+
+<!-- 말씀 배너 1 -->
+<div class="scripture-banner dark reveal">
+  <div class="sb-deco"></div>
+  <div class="sb-verse">"너희는 가서 모든 민족을 제자로 삼아<br>아버지와 아들과 성령의 이름으로 세례를 베풀고"</div>
+  <div class="sb-ref">— 마태복음 28:19</div>
+</div>
+
+<!-- 퀵 액세스 -->
+<div class="quick-access">
+  <div class="qa-inner reveal">
+    <a href="#ministry" class="qa-item"><div class="qa-icon blue">🌏</div><div class="qa-label">사역현장</div></a>
+    <a href="#programs" class="qa-item"><div class="qa-icon gold">📖</div><div class="qa-label">프로그램</div></a>
+    <a href="#portal" class="qa-item"><div class="qa-icon green">🔗</div><div class="qa-label">통합포털</div></a>
+    <a href="#account" class="qa-item"><div class="qa-icon blue">💝</div><div class="qa-label">후원하기</div></a>
+    <a href="#youtube" class="qa-item"><div class="qa-icon gold">📺</div><div class="qa-label">YouTube</div></a>
+    <a href="#faq" class="qa-item"><div class="qa-icon green">❓</div><div class="qa-label">FAQ</div></a>
+  </div>
+</div>
 
 <section class="ministry-sec" id="ministry">
   <div class="sec-inner">
@@ -649,6 +741,49 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
   </div>
 </section>
 
+<!-- ═══ 사역 타임라인 ═══ -->
+<section class="timeline-sec" id="timeline">
+  <div class="sec-inner" style="max-width:900px;margin:0 auto">
+    <span class="sec-label reveal">JOURNEY</span>
+    <h2 class="reveal">사역의 여정</h2>
+    <p class="sub reveal" style="text-align:center;color:var(--gray);margin-bottom:0">"여호와의 인자하심이 영원부터 영원까지 이르며" — 시편 103:17</p>
+    <div class="tl-track">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1987년</div>
+        <div class="tl-desc">목회 사역을 시작하다. 교회와 지역 사회를 섬기며 하나님의 부르심에 응답</div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2000년대</div>
+        <div class="tl-desc">이주민들과의 만남 — 낯선 땅에서 힘겹게 살아가는 이주민의 눈물을 보고, 선교의 방향이 바뀌다</div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2010년대</div>
+        <div class="tl-desc">부산남부노회 파송 선교사로서 네팔·베트남·스리랑카 등 10여개국 이주민 사역을 본격적으로 시작</div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2020년대</div>
+        <div class="tl-desc">글로컬브릿지 AI 아카데미 설립, AI와 성경을 결합한 혁신적 사역 모델 구축</div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-year">현재</div>
+        <div class="tl-desc">김해·기장·거제·부산 4개 거점, 10여개국 이주민 네트워크, 60주 AI 커리큘럼 운영 중</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 말씀 배너 2 -->
+<div class="scripture-banner gold reveal">
+  <div class="sb-deco"></div>
+  <div class="sb-verse">"내가 나그네 되었을 때에 너희가 영접하였고"</div>
+  <div class="sb-ref">— 마태복음 25:35</div>
+</div>
+
 <section class="pastor-sec" id="pastor">
   <div class="pastor-inner reveal">
     <div class="pastor-photo">
@@ -729,6 +864,18 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
   </div>
 </section>
 
+<!-- 참여 CTA 배너 -->
+<div class="cta-banner">
+  <div class="cta-inner reveal">
+    <h2>이주민의 눈물을 닦는 일에<br>함께 동참해 주세요</h2>
+    <p>기도, 후원, 자원봉사 등 다양한 방법으로<br>이주민과 함께하는 하나님 나라를 만들어 갑니다.</p>
+    <div class="cta-btns">
+      <a href="#account" class="cta-btn primary">💝 후원으로 동참하기</a>
+      <a href="tel:010-2083-3106" class="cta-btn secondary">📞 문의하기</a>
+    </div>
+  </div>
+</div>
+
 <!-- ═══ 자주 묻는 질문 FAQ ═══ -->
 <section class="faq-sec" id="faq">
   <div class="sec-inner" style="max-width:900px;margin:0 auto">
@@ -781,6 +928,13 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
     </div>
   </div>
 </section>
+
+<!-- 말씀 배너 3 -->
+<div class="scripture-banner light reveal">
+  <div class="sb-deco"></div>
+  <div class="sb-verse">"보라 내가 새 일을 행하리니 이제 나타낼 것이라"</div>
+  <div class="sb-ref">— 이사야 43:19</div>
+</div>
 
 <!-- ═══ 통합 포털 ═══ -->
 <section class="portal-sec" id="portal">
@@ -1333,8 +1487,8 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
     <p class="sub reveal" style="color:rgba(255,255,255,.5);margin-bottom:42px">"내가 나그네 되었을 때 너희가 나를 영접하였느니라" — 마태복음 25:35</p>
 
     <div class="trust-stats reveal">
-      <div class="trust-stat"><div class="ts-num">30+</div><div class="ts-label">사역 연수</div></div>
-      <div class="trust-stat"><div class="ts-num">18</div><div class="ts-label">연계 국가</div></div>
+      <div class="trust-stat"><div class="ts-num">37+</div><div class="ts-label">사역 연수</div></div>
+      <div class="trust-stat"><div class="ts-num">10+</div><div class="ts-label">연계 국가</div></div>
       <div class="trust-stat"><div class="ts-num">105</div><div class="ts-label">웹사이트 네트워크</div></div>
       <div class="trust-stat"><div class="ts-num">6</div><div class="ts-label">사역 현장</div></div>
     </div>
@@ -1371,6 +1525,24 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
     </div>
   </div>
 </section>
+
+<!-- 사역 현장 갤러리 -->
+<div class="gallery-strip">
+  <div class="gallery-row">
+    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=440&h=320&fit=crop" alt="이주민 사역" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=440&h=320&fit=crop" alt="교육 현장" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=440&h=320&fit=crop" alt="공동체" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=440&h=320&fit=crop" alt="선교 사역" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=440&h=320&fit=crop" alt="성경 공부" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881571?w=440&h=320&fit=crop" alt="기도" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=440&h=320&fit=crop" alt="이주민 사역" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=440&h=320&fit=crop" alt="교육 현장" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=440&h=320&fit=crop" alt="공동체" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=440&h=320&fit=crop" alt="선교 사역" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=440&h=320&fit=crop" alt="성경 공부" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881571?w=440&h=320&fit=crop" alt="기도" loading="lazy">
+  </div>
+</div>
 
 <section class="notice-sec" id="notice">
   <div class="sec-inner">
@@ -1754,7 +1926,7 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').style.background=
-    window.scrollY>60?'rgba(5,15,9,0.98)':'rgba(27,58,92,0.96)';
+    window.scrollY>60?'rgba(15,30,52,0.98)':'rgba(27,58,92,0.96)';
 });
 </script>
 
