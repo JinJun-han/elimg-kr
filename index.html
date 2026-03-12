@@ -256,7 +256,8 @@ footer{background:#050A14;padding:44px 5% 26px;border-top:1px solid rgba(46,107,
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.no-js .reveal{opacity:1;transform:none}
 
 /* ── 통합 포털 ── */
 .portal-sec{padding:80px 5%;background:linear-gradient(180deg,var(--green-light) 0%,#fff 100%)}
@@ -1894,11 +1895,13 @@ if(sb)statsObs.observe(sb);
 function filterMinistry(cat,btn){
   document.querySelectorAll('.m-tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('[data-cat]').forEach(card=>{
+  document.querySelectorAll('.m-grid [data-cat]').forEach(card=>{
     if(cat==='all'||card.dataset.cat===cat){
       card.classList.remove('hidden');
+      card.style.display='';
     } else {
       card.classList.add('hidden');
+      card.style.display='none';
     }
   });
 }
@@ -1914,11 +1917,24 @@ function copyAccount(num){
   });
 }
 
-<script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*70); });
-},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function revealInit(){
+  var reveals=document.querySelectorAll('.reveal');
+  if(!reveals.length) return;
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
+    },{threshold:0.02, rootMargin:'0px 0px 80px 0px'});
+    reveals.forEach(function(el){obs.observe(el);});
+  } else {
+    reveals.forEach(function(el){el.classList.add('visible');});
+  }
+  // Fallback: reveal everything after 2s no matter what
+  setTimeout(function(){
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){el.classList.add('visible');});
+  },2000);
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',revealInit);}else{revealInit();}
+window.addEventListener('load',revealInit);
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').style.background=
     window.scrollY>60?'rgba(15,30,52,0.98)':'rgba(27,58,92,0.96)';
