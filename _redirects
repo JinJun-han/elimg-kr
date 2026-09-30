@@ -1,3 +1,51 @@
 /ai    /    301
+
 /agency/*    /agency/index.html    200
+
+/workers    /workers/index.html    200
+/workers/    /workers/index.html    200
+/workers/*    /workers/index.html    200
+
+/students    /students/index.html    200
+/students/    /students/index.html    200
+/students/*    /students/index.html    200
+
+/jobs    /jobs/index.html    200
+/jobs/    /jobs/index.html    200
+/jobs/*    /jobs/index.html    200
+
+/learn    /learn/index.html    200
+/learn/    /learn/index.html    200
+/learn/*    /learn/index.html    200
+
+/partners    /partners/index.html    200
+/partners/    /partners/index.html    200
+/partners/university    /partners/university/index.html    200
+/partners/university/    /partners/university/index.html    200
+/partners/business    /partners/business/index.html    200
+/partners/business/    /partners/business/index.html    200
+
+/programs    /programs/index.html    200
+/programs/    /programs/index.html    200
+
+/global    /global/index.html    200
+/global/    /global/index.html    200
+
+/about    /about/index.html    200
+/about/    /about/index.html    200
+
+/contact    /contact/index.html    200
+/contact/    /contact/index.html    200
+
+/regions    /regions/index.html    200
+/regions/    /regions/index.html    200
+/regions/gimhae    /regions/gimhae/index.html    200
+/regions/gimhae/    /regions/gimhae/index.html    200
+/regions/geoje    /regions/geoje/index.html    200
+/regions/geoje/    /regions/geoje/index.html    200
+/regions/gijang    /regions/gijang/index.html    200
+/regions/gijang/    /regions/gijang/index.html    200
+/regions/hadong    /regions/hadong/index.html    200
+/regions/hadong/    /regions/hadong/index.html    200
+
 /*    /index.html    200
