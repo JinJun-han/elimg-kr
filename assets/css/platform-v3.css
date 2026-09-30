@@ -7,5 +7,20 @@ main section{padding:72px 22px}.soft{background:var(--pale)}h2{font-family:"Noto
 footer{background:#08111e;color:rgba(255,255,255,.55);padding:34px 22px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px}.foot a{color:rgba(255,255,255,.7);text-decoration:none}
 .breadcrumb{font-size:11px;color:var(--muted);margin-bottom:12px}.breadcrumb a{text-decoration:none;color:var(--blue)}
 .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.feature{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}.feature strong{display:block;color:var(--navy);font-size:13px}.feature small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-@media(max-width:900px){.links{display:none}.grid,.grid.two,.journey{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){
+  header{position:sticky}
+  .nav{height:auto;min-height:66px;flex-wrap:wrap;padding:10px 16px}
+  .brand{width:100%;display:flex;justify-content:space-between;align-items:center}
+  .brand small{display:inline;margin-left:8px}
+  .links{display:flex;width:100%;overflow-x:auto;gap:7px;padding:2px 0 4px;scrollbar-width:none}
+  .links::-webkit-scrollbar{display:none}
+  .links a{white-space:nowrap;font-size:11px;padding:7px 10px;border-radius:16px;background:rgba(255,255,255,.07)}
+  .links .nav-cta{padding:7px 10px}
+  .grid,.grid.two,.journey{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:600px){.hero{padding:60px 18px}.nav{padding:0 16px}.grid,.grid.two,.journey,.feature-list{grid-template-columns:1fr}main section{padding:56px 18px}}
+
+.card,.step,.feature{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover,.step:hover,.feature:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,58,92,.09);border-color:#c7d8e8}
+.page-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.page-links a{font-size:12px;text-decoration:none;color:var(--blue);font-weight:700;background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:8px}
