@@ -1,0 +1,6 @@
+[build]
+  publish = "."
+
+# Static multi-page site.
+# Production branch is configured in the Netlify UI as "main".
+# Redirect rules are maintained in the root-level _redirects file.
