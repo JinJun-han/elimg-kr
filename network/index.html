@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이주민 선교 네트워크 | ELIM G BRIDGE</title>
+<meta name="description" content="부산·울산·경남 이주민 사역자, 교회, 센터, 기관을 검색하고 연결 요청과 신규 동역자 등록을 할 수 있는 상시 네트워크 창구입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/platform-v3.css">
+<style>
+.network-hero{padding:82px 22px 70px;background:linear-gradient(125deg,#08253B 0%,#075441 72%,#0B6B50 100%);color:#fff;position:relative;overflow:hidden}
+.network-hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(214,155,29,.2);border-radius:50%;right:-180px;top:-260px;box-shadow:0 0 0 70px rgba(214,155,29,.035),0 0 0 140px rgba(214,155,29,.025)}
+.network-inner{max-width:1180px;margin:auto;position:relative;z-index:2}.network-hero h1{font-family:"Noto Serif KR",serif;font-size:clamp(38px,5.4vw,68px);line-height:1.16;margin:10px 0 18px}.network-hero p{max-width:800px;color:rgba(255,255,255,.76);font-size:15px}
+.network-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.network-actions a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:12px 16px;border-radius:9px;font-size:13px;font-weight:800}.network-actions .primary{background:var(--gold2);color:var(--ink-deep)}.network-actions .ghost{border:1px solid rgba(255,255,255,.28);color:#fff}
+.network-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}.network-stat{padding:16px;border:1px solid rgba(255,255,255,.13);border-radius:14px;background:rgba(255,255,255,.06)}.network-stat strong{display:block;font-family:"Noto Serif KR",serif;font-size:28px;color:var(--gold2)}.network-stat span{font-size:11px;color:rgba(255,255,255,.62)}
+.network-section{padding:72px 22px}.network-section.alt{background:var(--stone)}.network-wrap{max-width:1180px;margin:auto}.section-copy{max-width:780px;color:var(--muted);font-size:14px;margin-bottom:26px}
+.directory-tools{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin:22px 0 18px}.network-search{width:100%;min-height:48px;padding:0 14px;border:1px solid var(--line);border-radius:11px;background:#fff}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;color:#425466;border-radius:999px;min-height:40px;padding:0 12px;font-weight:800;font-size:11px;cursor:pointer}.filter.active{background:var(--premium-green,#064E3B);color:#fff;border-color:var(--premium-green,#064E3B)}
+.directory-summary{font-size:12px;color:var(--muted);margin-bottom:14px}.directory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.person-card{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:16px;padding:20px;cursor:pointer;min-height:175px;transition:.2s;box-shadow:0 4px 16px rgba(8,37,59,.04)}.person-card:hover{transform:translateY(-3px);border-color:#D5C8AE;box-shadow:0 12px 28px rgba(8,37,59,.09)}.person-card h3{margin:0;color:var(--ink-deep);font-size:17px}.person-org{display:block;color:var(--green);font-weight:800;font-size:12px;margin:7px 0}.person-field{font-size:12px;color:var(--muted);margin:0}.person-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.person-badges span{font-size:9px;font-weight:800;padding:4px 7px;border-radius:999px;background:#EEF4F1;color:var(--green-dark)}
+.region-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.region-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:22px}.region-card h3{margin:2px 0 4px;color:var(--ink-deep)}.region-card p{font-size:12px;color:var(--muted)}.resource-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.resource-chips span{font-size:10px;padding:5px 8px;border-radius:8px;background:#F5F1E8;color:#5E5341;border:1px solid #E9DFCD}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.flow-step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;min-height:130px}.flow-step span{font-size:9px;color:var(--gold);font-weight:900}.flow-step b{display:block;color:var(--ink-deep);margin:5px 0}.flow-step p{font-size:11px;color:var(--muted);margin:0}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 22px rgba(8,37,59,.04)}.form-card h3{margin:0 0 8px;color:var(--ink-deep)}.form-card>p{font-size:12px;color:var(--muted);margin:0 0 17px}.field{margin-bottom:12px}.field label{display:block;font-size:11px;font-weight:800;color:#354657;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #D9E0DD;border-radius:9px;padding:10px 11px;background:#fff;font:inherit;font-size:12px}.field textarea{min-height:100px;resize:vertical}.check{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;color:var(--muted);line-height:1.5}.check input{margin-top:3px}.submit{border:0;border-radius:9px;background:linear-gradient(180deg,#0A6A51,#064E3B);color:#fff;padding:11px 15px;font-weight:900;cursor:pointer}.form-note{font-size:10px;color:#7A6850;background:#FFF7E5;border:1px solid #F0DFB7;border-radius:9px;padding:10px;margin-bottom:13px}
+.source-box{margin-top:24px;padding:18px;border-left:4px solid var(--gold);background:#fff;border-radius:10px;font-size:12px;color:#5A6571}.source-box a{color:var(--green);font-weight:800}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:18px;background:rgba(4,19,32,.72);backdrop-filter:blur(8px)}.modal.open{display:grid}.dialog{width:min(650px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 35px 90px rgba(0,0,0,.3)}.dialog-head{display:flex;justify-content:space-between;gap:15px;padding:23px 24px;border-bottom:1px solid var(--line)}.dialog-head h3{margin:0}.close{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;cursor:pointer}.dialog-body{padding:22px 24px}.dialog-body dl{display:grid;grid-template-columns:80px 1fr;gap:8px 12px;font-size:12px}.dialog-body dt{font-weight:900;color:var(--ink-deep)}.dialog-body dd{margin:0;color:#52606d}.dialog-detail{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:#52606d}.dialog-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.dialog-links a{font-size:10px;background:var(--ink-deep);color:#fff;text-decoration:none;border-radius:8px;padding:7px 9px}
+.empty{display:none;padding:30px;text-align:center;color:var(--muted)}
+@media(max-width:950px){.directory-grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}.network-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.directory-tools{grid-template-columns:1fr}.region-grid,.form-grid{grid-template-columns:1fr}.filters{overflow:auto;flex-wrap:nowrap;padding-bottom:3px}.filter{white-space:nowrap}}
+@media(max-width:580px){.network-hero{padding:58px 18px}.network-section{padding:56px 18px}.directory-grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.network-stats{grid-template-columns:1fr 1fr}.person-card{min-height:0}}
+</style>
+</head>
+<body>
+<header><nav class="nav"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>엘림G브릿지<small>ELIM G BRIDGE · elimg.kr</small></span></a><div class="links">
+<a href="/workers/">근로자</a><a href="/students/">유학생</a><a href="/jobs/">Jobs</a><a href="/learn/">Learn</a><a href="/partners/">대학·기업</a><a href="/regions/">지역</a><a href="/network/">네트워크</a><a class="nav-cta" href="#connect">연결 요청</a>
+</div></nav></header>
+
+<section class="network-hero"><div class="network-inner">
+<span class="eyebrow">MIGRANT MISSION NETWORK</span>
+<h1>사역자를 찾고,<br>센터를 잇고,<br>다음 협력을 시작합니다</h1>
+<p>어느 한 기관에 속하지 않는 협력 네트워크입니다. 각 교회·사역자·센터·기관의 고유성과 운영책임을 존중하면서, 필요한 사람과 준비된 자원을 연결하여 각자의 사역을 더 잘 작동하게 합니다.</p>
+<div class="network-actions"><a class="primary" href="#directory">38명 동역자 찾기 →</a><a class="ghost" href="#resource-map">부울경 자원지도</a><a class="ghost" href="#connect">새 연결 요청</a><a class="ghost" href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/#resource-map" target="_blank" rel="noopener">원본 Mission Network ↗</a></div>
+<div class="network-stats"><div class="network-stat"><strong>38</strong><span>기존 동역자 명단 보존</span></div><div class="network-stat"><strong>4</strong><span>부산·울산·경남·글로벌</span></div><div class="network-stat"><strong>1</strong><span>상시 연결창구</span></div><div class="network-stat"><strong>Human</strong><span>최종 연결은 사람이 확인</span></div></div>
+</div></section>
+
+<main>
+<section class="network-section" id="directory"><div class="network-wrap">
+<span class="eyebrow">PARTNERSHIP DIRECTORY</span><h2>사역자·목회자·센터 연결명단</h2>
+<p class="section-copy">기존 Mission Network에 소개된 명단을 그대로 보존했습니다. 이름·기관·사역 분야로 검색하고 상세 사역과 확인된 공식 링크를 볼 수 있습니다. 소속이 확인되지 않은 항목은 계속 검수합니다.</p>
+<div class="directory-tools"><input class="network-search" id="networkSearch" placeholder="이름 · 기관 · 사역 분야 검색" aria-label="동역자 검색"><div class="filters">
+<button class="filter active" data-filter="전체">전체</button><button class="filter" data-filter="교회">교회</button><button class="filter" data-filter="센터">센터</button><button class="filter" data-filter="네트워크">네트워크</button><button class="filter" data-filter="교육">교육·연구</button><button class="filter" data-filter="미확인">소속 확인</button>
+</div></div>
+<div class="directory-summary" id="networkCount"></div><div class="directory-grid" id="networkPeople"></div><div class="empty" id="networkEmpty">검색 조건에 맞는 동역자가 없습니다.</div>
+<div class="source-box">명단은 기존 Mission Network의 2026년 9월 18일 기준 자료를 보존하여 구성했습니다. 본인 확인이 필요한 소속·직함은 <a href="#register">정보 수정 창구</a>를 통해 계속 갱신합니다.</div>
+</div></section>
+
+<section class="network-section alt" id="resource-map"><div class="network-wrap">
+<span class="eyebrow">BUSAN · ULSAN · GYEONGNAM RESOURCE MAP</span><h2>부울경 이주민 선교 자원지도</h2>
+<p class="section-copy">지역별 사역 거점을 한눈에 보고, 현장의 필요를 가장 가까운 교회·센터·교육기관·선교 네트워크와 연결합니다.</p>
+<div class="region-grid" id="resourceGrid"></div>
+</div></section>
+
+<section class="network-section"><div class="network-wrap">
+<span class="eyebrow">CONNECTION DESK</span><h2>소개에서 끝나지 않고 실제 연결까지</h2>
+<p class="section-copy">사이트의 역할은 명단을 전시하는 것이 아니라 다음 행동을 만드는 것입니다. AI는 검색·분류·번역을 돕고, 최종 연결은 사람이 확인합니다.</p>
+<div class="flow">
+<div class="flow-step"><span>01</span><b>요청</b><p>사람·기관의 필요를 접수합니다.</p></div>
+<div class="flow-step"><span>02</span><b>확인</b><p>최소 정보와 공개 동의를 확인합니다.</p></div>
+<div class="flow-step"><span>03</span><b>분류</b><p>지역·언어·사역 분야를 정리합니다.</p></div>
+<div class="flow-step"><span>04</span><b>매칭</b><p>가장 가까운 적합 자원을 찾습니다.</p></div>
+<div class="flow-step"><span>05</span><b>Human Gate</b><p>담당자가 실제 연결 전 다시 확인합니다.</p></div>
+<div class="flow-step"><span>06</span><b>Follow-up</b><p>연결 이후 다음 행동을 기록합니다.</p></div>
+</div></div></section>
+
+<section class="network-section alt" id="connect"><div class="network-wrap">
+<span class="eyebrow">KEEP CONNECTING</span><h2>계속 연결되는 상시 창구</h2>
+<p class="section-copy">새로운 사람과 기관이 들어오고 기존 정보가 갱신되어야 네트워크가 살아 있습니다. 아래 접수는 Netlify Forms로 관리자에게 모이며, 검수 후 공개·연결합니다.</p>
+<div class="form-grid">
+<form class="form-card" name="network-connection-request" method="POST" action="/network/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="network-connection-request"><p hidden><label>봇 필드 <input name="bot-field"></label></p>
+<h3>연결 요청</h3><p>이주민·사역자·교회·센터·기관이 필요한 동역자를 찾을 때 사용합니다.</p>
+<div class="form-note">여권번호·외국인등록번호·진단명 등 민감정보는 적지 마세요. 필요한 최소 정보만 접수합니다.</div>
+<div class="field"><label>요청 유형 *</label><select name="요청유형" required><option value="">선택</option><option>이주민 도움 연결</option><option>사역자·교회 연결</option><option>센터·기관 연결</option><option>공동 프로젝트 협력</option></select></div>
+<div class="field"><label>지역 *</label><select name="지역" required><option value="">선택</option><option>부산</option><option>울산</option><option>경남</option><option>기타 지역</option><option>해외</option></select></div>
+<div class="field"><label>필요 분야 *</label><select name="필요분야" required><option value="">선택</option><option>예배·교회</option><option>한국어·교육</option><option>취업·일터</option><option>통역·언어</option><option>생활·정착</option><option>비자·행정</option><option>의료·회복</option><option>선교 연구·훈련</option><option>기타</option></select></div>
+<div class="field"><label>주요 언어·국가</label><input name="언어국가" placeholder="예: 네팔어 · 네팔"></div>
+<div class="field"><label>이름 또는 기관명 *</label><input name="이름기관" required></div>
+<div class="field"><label>연락 방법 *</label><input name="연락방법" required placeholder="이메일 또는 전화/메신저"></div>
+<div class="field"><label>연결이 필요한 내용 *</label><textarea name="요청내용" required></textarea></div>
+<label class="check"><input type="checkbox" name="동의" required> 입력한 정보가 연결 검토와 후속 연락을 위해 관리자에게 전달되는 것에 동의합니다.</label>
+<br><button class="submit" type="submit">연결 요청 보내기</button>
+</form>
+
+<form class="form-card" id="register" name="network-partner-registration" method="POST" action="/network/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="network-partner-registration"><p hidden><label>봇 필드 <input name="bot-field"></label></p>
+<h3>신규 등록 · 정보 수정</h3><p>새 사역자·교회·센터를 등록하거나 기존 프로필·공식 링크를 수정합니다.</p>
+<div class="form-note">제출 내용은 자동 공개되지 않습니다. 본인·기관 확인과 Human Review 후 명단과 자원지도에 반영합니다.</div>
+<div class="field"><label>신청 유형 *</label><select name="신청유형" required><option value="">선택</option><option>신규 사역자 등록</option><option>교회·센터·기관 등록</option><option>기존 정보 수정</option><option>공식 사이트 링크 추가</option></select></div>
+<div class="field"><label>이름 *</label><input name="이름" required></div>
+<div class="field"><label>소속·기관 *</label><input name="소속" required></div>
+<div class="field"><label>역할·직함</label><input name="역할"></div>
+<div class="field"><label>사역 지역</label><input name="사역지역" placeholder="예: 김해 · 거제"></div>
+<div class="field"><label>주요 국가·언어</label><input name="국가언어" placeholder="예: 베트남 · 베트남어"></div>
+<div class="field"><label>전문·사역 분야 *</label><input name="사역분야" required placeholder="예: 교회 · 한국어 · 이주민 돌봄"></div>
+<div class="field"><label>공식 사이트</label><input type="url" name="공식사이트" placeholder="https://"></div>
+<div class="field"><label>관리자 연락 방법 *</label><input name="관리자연락" required placeholder="공개용이 아니라 검수 연락용"></div>
+<div class="field"><label>소개·수정 요청</label><textarea name="소개수정"></textarea></div>
+<label class="check"><input type="checkbox" name="공개동의" required> 검수된 이름·소속·사역 분야·공식 링크를 네트워크에 공개하는 것에 동의합니다.</label>
+<br><button class="submit" type="submit">등록·수정 요청 보내기</button>
+</form>
+</div>
+</div></section>
+</main>
+
+<footer><div class="foot"><div>ELIM G BRIDGE · 소유가 아니라 연결 · 통합이 아니라 연합</div><div><a href="/">elimg.kr</a> · <a href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/" target="_blank" rel="noopener">Mission Network</a> · <a href="/contact/">문의</a></div></div></footer>
+
+<div class="modal" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileName"><div class="dialog"><div class="dialog-head"><div><span class="eyebrow">MINISTRY PROFILE</span><h3 id="profileName"></h3></div><button class="close" id="profileClose" aria-label="닫기">×</button></div><div class="dialog-body"><dl><dt>소속</dt><dd id="profileOrg"></dd><dt>역할</dt><dd id="profileRole"></dd><dt>사역 분야</dt><dd id="profileField"></dd></dl><div class="dialog-detail" id="profileDetail"></div><div class="dialog-links" id="profileLinks"></div></div></div></div>
+
+<script src="/network/data.js"></script>
+<script src="/network/network.js"></script>
+</body></html>
