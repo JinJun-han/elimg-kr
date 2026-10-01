@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>이주민 선교 네트워크 | ELIM G BRIDGE</title>
-<meta name="description" content="부산·울산·경남 이주민 사역자, 교회, 센터, 기관을 검색하고 연결 요청과 신규 동역자 등록을 할 수 있는 상시 네트워크 창구입니다.">
+<title>부울경 이주민 선교 협력 네트워크 | 연결·운영지원 데스크</title>
+<meta name="description" content="부울경 이주민 선교 협력 네트워크의 사역자·교회·센터·기관 검색, 자원지도, 연결 요청, 신규 등록과 정보 수정을 지원하는 상시 운영지원 데스크입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/platform-v3.css">
@@ -25,22 +25,38 @@
 @media(max-width:950px){.directory-grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}.network-stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.directory-tools{grid-template-columns:1fr}.region-grid,.form-grid{grid-template-columns:1fr}.filters{overflow:auto;flex-wrap:nowrap;padding-bottom:3px}.filter{white-space:nowrap}}
 @media(max-width:580px){.network-hero{padding:58px 18px}.network-section{padding:56px 18px}.directory-grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.network-stats{grid-template-columns:1fr 1fr}.person-card{min-height:0}}
+
+.steward-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.steward-card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff}
+.steward-card.dark{background:linear-gradient(145deg,#08253B,#075441);color:#fff;border:0}
+.steward-card.dark h3{color:#fff}.steward-card.dark p,.steward-card.dark li{color:rgba(255,255,255,.75)}
+.steward-list{margin:14px 0 0;padding-left:19px}.steward-list li{margin:7px 0;font-size:12px}
+.steward-principles{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+.steward-principles div{background:#F6F4EF;border:1px solid #E8E1D4;border-radius:11px;padding:12px}
+.steward-principles strong{display:block;color:var(--ink-deep);font-size:12px}.steward-principles span{font-size:10px;color:var(--muted)}
+@media(max-width:760px){.steward-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><nav class="nav"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>엘림G브릿지<small>ELIM G BRIDGE · elimg.kr</small></span></a><div class="links">
-<a href="/workers/">근로자</a><a href="/students/">유학생</a><a href="/jobs/">Jobs</a><a href="/learn/">Learn</a><a href="/partners/">대학·기업</a><a href="/regions/">지역</a><a href="/network/">네트워크</a><a class="nav-cta" href="#connect">연결 요청</a>
+<header><nav class="nav"><a class="brand" href="/network/"><span class="brand-mark" aria-hidden="true"></span><span>부울경 이주민 선교 협력 네트워크<small>ELIM G BRIDGE · 디지털 운영지원</small></span></a><div class="links">
+<a href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/" target="_blank" rel="noopener">네트워크 메인 ↗</a><a href="#directory">동역자</a><a href="#resource-map">자원지도</a><a href="#steward">운영지원</a><a href="/">ELIM G</a><a class="nav-cta" href="#connect">연결 요청</a>
 </div></nav></header>
 
 <section class="network-hero"><div class="network-inner">
-<span class="eyebrow">MIGRANT MISSION NETWORK</span>
-<h1>사역자를 찾고,<br>센터를 잇고,<br>다음 협력을 시작합니다</h1>
-<p>어느 한 기관에 속하지 않는 협력 네트워크입니다. 각 교회·사역자·센터·기관의 고유성과 운영책임을 존중하면서, 필요한 사람과 준비된 자원을 연결하여 각자의 사역을 더 잘 작동하게 합니다.</p>
-<div class="network-actions"><a class="primary" href="#directory">38명 동역자 찾기 →</a><a class="ghost" href="#resource-map">부울경 자원지도</a><a class="ghost" href="#connect">새 연결 요청</a><a class="ghost" href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/#resource-map" target="_blank" rel="noopener">원본 Mission Network ↗</a></div>
-<div class="network-stats"><div class="network-stat"><strong>38</strong><span>기존 동역자 명단 보존</span></div><div class="network-stat"><strong>4</strong><span>부산·울산·경남·글로벌</span></div><div class="network-stat"><strong>1</strong><span>상시 연결창구</span></div><div class="network-stat"><strong>Human</strong><span>최종 연결은 사람이 확인</span></div></div>
+<span class="eyebrow">BUSAN · ULSAN · GYEONGNAM MIGRANT MISSION COOPERATION NETWORK</span>
+<h1>부울경 이주민 선교<br>협력 네트워크</h1>
+<p>어느 한 기관에 속하지 않는 공동 네트워크입니다. 부산·울산·경남의 교회·선교사·목회자·센터·기관이 각자의 고유성을 유지하면서 서로 연결하고 연합하여 이주민 선교 현장을 함께 세웁니다. 이 페이지는 네트워크의 디지털 운영지원·접수·연결 데스크입니다.</p>
+<div class="network-actions"><a class="primary" href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/" target="_blank" rel="noopener">네트워크 메인 사이트 ↗</a><a class="ghost" href="#directory">38명 동역자 찾기</a><a class="ghost" href="#resource-map">부울경 자원지도</a><a class="ghost" href="#connect">새 연결 요청</a></div>
+<div class="network-stats"><div class="network-stat"><strong>38</strong><span>기존 동역자 명단 보존</span></div><div class="network-stat"><strong>공동</strong><span>어느 한 기관의 소유가 아님</span></div><div class="network-stat"><strong>상시</strong><span>등록·검증·연결·갱신</span></div><div class="network-stat"><strong>Human</strong><span>최종 연결은 사람이 확인</span></div></div>
 </div></section>
 
 <main>
+<section class="network-section" id="steward"><div class="network-wrap">
+<span class="eyebrow">NETWORK STEWARDSHIP</span><h2>네트워크가 주체이고, ELIM G BRIDGE는 섬기는 구심점입니다</h2>
+<p class="section-copy">엘림G선교회는 부울경 이주민 선교 협력 네트워크의 한 구성원으로 본연의 사역을 감당합니다. 동시에 엘림G브릿지는 네트워크 전체가 더 잘 연결되고 확산되도록 디지털 플랫폼과 관리 실무를 집중해서 섬깁니다.</p>
+<div class="steward-grid"><article class="steward-card"><h3>공동 네트워크의 원칙</h3><p>각 교회·센터·단체의 사역과 책임을 존중합니다. 네트워크는 모든 사역을 하나로 통합하지 않고 서로의 강점을 연결하여 각자의 사역을 최적화·극대화합니다.</p><div class="steward-principles"><div><strong>고유성</strong><span>각 기관의 이름과 사역을 지킵니다.</span></div><div><strong>상호보완</strong><span>필요한 강점과 자원을 서로 나눕니다.</span></div><div><strong>현장 중심</strong><span>실제 이주민의 필요에서 출발합니다.</span></div><div><strong>공동 성장</strong><span>연결의 열매가 다시 네트워크 자원이 됩니다.</span></div></div></article><article class="steward-card dark"><h3>ELIM G BRIDGE가 맡는 운영지원</h3><ul class="steward-list"><li>사역자·교회·센터·기관 디렉터리 관리</li><li>부울경 자원지도 지속 업데이트</li><li>신규 등록·정보 수정·공개 동의 확인</li><li>연결 요청 접수와 적합한 현장 매칭</li><li>AI·다국어·디지털 도구로 검색·번역·정리 지원</li><li>공동행사·프로젝트·교육 협력 촉진</li><li>연결 이후 후속관리와 네트워크 갱신</li><li>사이트 운영·홍보·확산과 플랫폼 개선</li></ul><p><strong>관리자는 네트워크를 소유하지 않고 섬깁니다.</strong> ELIM G의 이름을 앞세우기보다 부울경 전체 이주민 선교 생태계가 성장하도록 돕습니다.</p></article></div>
+</div></section>
+
 <section class="network-section" id="directory"><div class="network-wrap">
 <span class="eyebrow">PARTNERSHIP DIRECTORY</span><h2>사역자·목회자·센터 연결명단</h2>
 <p class="section-copy">기존 Mission Network에 소개된 명단을 그대로 보존했습니다. 이름·기관·사역 분야로 검색하고 상세 사역과 확인된 공식 링크를 볼 수 있습니다. 소속이 확인되지 않은 항목은 계속 검수합니다.</p>
@@ -109,7 +125,7 @@
 </div></section>
 </main>
 
-<footer><div class="foot"><div>ELIM G BRIDGE · 소유가 아니라 연결 · 통합이 아니라 연합</div><div><a href="/">elimg.kr</a> · <a href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/" target="_blank" rel="noopener">Mission Network</a> · <a href="/contact/">문의</a></div></div></footer>
+<footer><div class="foot"><div>부울경 이주민 선교 협력 네트워크 · 각자의 고유성은 살리고, 연결과 연합은 더 강하게</div><div><a href="https://elimg-migrant-mission-network.kodhjj.chatgpt.site/" target="_blank" rel="noopener">네트워크 메인</a> · <a href="/">ELIM G BRIDGE 운영지원</a> · <a href="/contact/">문의</a></div></div></footer>
 
 <div class="modal" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileName"><div class="dialog"><div class="dialog-head"><div><span class="eyebrow">MINISTRY PROFILE</span><h3 id="profileName"></h3></div><button class="close" id="profileClose" aria-label="닫기">×</button></div><div class="dialog-body"><dl><dt>소속</dt><dd id="profileOrg"></dd><dt>역할</dt><dd id="profileRole"></dd><dt>사역 분야</dt><dd id="profileField"></dd></dl><div class="dialog-detail" id="profileDetail"></div><div class="dialog-links" id="profileLinks"></div></div></div></div>
 
