@@ -48,4 +48,10 @@
 /regions/hadong    /regions/hadong/index.html    200
 /regions/hadong/    /regions/hadong/index.html    200
 
+/network    /network/index.html    200
+/network/    /network/index.html    200
+/network/thanks    /network/thanks/index.html    200
+/network/thanks/    /network/thanks/index.html    200
+/network/*    /network/index.html    200
+
 /*    /index.html    200
