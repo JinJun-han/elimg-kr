@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "updated": "2026-09-30",
+  "updated": "2026-10-06",
   "source": "elimg.kr portal registry",
   "policy": {
     "ACTIVE": "대표 운영본. 공식 포털에 노출",
@@ -15,15 +15,15 @@
     "COOPERATION": "고유 운영주체를 유지하는 협력 사역"
   },
   "counts": {
-    "total": 99,
-    "ACTIVE": 27,
+    "total": 100,
+    "ACTIVE": 28,
     "MERGE": 30,
     "REDIRECT": 23,
     "ARCHIVE": 19,
     "active_tiers": {
       "CORE": 2,
       "BRIDGE": 7,
-      "COOPERATION": 5,
+      "COOPERATION": 6,
       "SATELLITE": 13
     }
   },
@@ -1219,6 +1219,18 @@
       "target": "archive",
       "reason": "배포 없음/404",
       "tier": ""
+    },
+    {
+      "id": 100,
+      "href": "https://vietkorfine.com/",
+      "cat": "cat-active",
+      "name": "VIET-KOR",
+      "desc": "베트남–한국 무역·시장 연결 협력 파트너",
+      "url": "vietkorfine.com",
+      "status": "ACTIVE",
+      "target": "elimg.kr/partners/vietkor/",
+      "reason": "베트남 현지 운영주체와 한진준 한국 대표 창구의 협력 파트너",
+      "tier": "COOPERATION"
     }
   ]
 }

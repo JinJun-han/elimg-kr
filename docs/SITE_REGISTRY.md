@@ -1,6 +1,6 @@
 # ELIM G Site Registry v3.0
 
-업데이트: 2026-09-30
+업데이트: 2026-10-06
 
 ## 운영 원칙
 
@@ -11,8 +11,8 @@
 
 ## 요약
 
-- 전체: 99
-- ACTIVE: 27
+- 전체: 100
+- ACTIVE: 28
 - MERGE: 30
 - REDIRECT: 23
 - ARCHIVE: 19
@@ -22,7 +22,7 @@
 - CORE: 2
 - BRIDGE: 7
 - SATELLITE: 13
-- COOPERATION: 5
+- COOPERATION: 6
 
 ## 전체 자산
 
@@ -127,3 +127,4 @@
 | 97 | 김해 V1 | REDIRECT | - | gimhae1.netlify.app | elimg.kr/regions/gimhae/ (향후) | 김해 지역 대표 경로로 이동 |
 | 98 | 글로컬브릿지 (404) | ARCHIVE | - | glocalbridge.netlify.app | archive | 배포 없음/404 |
 | 99 | ELIMG10 (404) | ARCHIVE | - | elimg10.netlify.app | archive | 배포 없음/404 |
+| 100 | VIET-KOR | ACTIVE | COOPERATION | vietkorfine.com | elimg.kr/partners/vietkor/ | 베트남 현지 운영주체와 한국 대표 창구의 협력 파트너 |
