@@ -1,0 +1,12 @@
+{
+  "ministry": "화요일터교회",
+  "defaultRetentionDays": 30,
+  "allowedRetentionDays": [14, 21, 30],
+  "archiveUrl": null,
+  "sermons": [],
+  "news": [],
+  "photos": [],
+  "resources": [],
+  "videos": [],
+  "reflections": []
+}
