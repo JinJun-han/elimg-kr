@@ -1,9 +1,24 @@
 {
   "ministry": "화요일터교회",
   "defaultRetentionDays": 30,
-  "allowedRetentionDays": [14, 21, 30],
+  "allowedRetentionDays": [
+    14,
+    21,
+    30
+  ],
   "archiveUrl": null,
-  "sermons": [],
+  "sermons": [
+    {
+      "id": "colossians-week-1",
+      "title": "복음은 삶을 변화시킵니다",
+      "date": "골로새서 강해 제1주 · 1:1–14",
+      "summary": "하나님께서 그리스도 안에서 우리를 구원하셨기에 복음은 오늘 우리의 믿음과 관계와 일터를 새롭게 합니다. 은혜로 받은 구원에 감사하며 작은 순종과 한 사람을 향한 사랑으로 응답합니다.",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "url": "#week1-summary"
+    }
+  ],
   "news": [],
   "photos": [],
   "resources": [],
