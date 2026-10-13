@@ -20,7 +20,58 @@
     }
   ],
   "news": [],
-  "photos": [],
+  "photos": [
+    {
+      "id": "workplace-20261013-worship",
+      "title": "함께 드리는 일터예배",
+      "description": "성경을 펴고 함께 찬양하며 예배하는 화요일터교회 공동체",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "imageUrl": "/workplace-church/assets/photos/worship.webp",
+      "aiGenerated": false
+    },
+    {
+      "id": "workplace-20261013-joy",
+      "title": "말씀과 함께하는 기쁨",
+      "description": "일터예배에 함께한 성도들이 밝게 웃으며 남긴 공동체의 기록",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "imageUrl": "/workplace-church/assets/photos/joy.webp",
+      "aiGenerated": false
+    },
+    {
+      "id": "workplace-20261013-birthday-meal",
+      "title": "생일을 축하하며 함께한 식탁",
+      "description": "공동체가 식탁에 둘러앉아 생일을 축하하며 교제하는 모습",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "imageUrl": "/workplace-church/assets/photos/birthday-meal.webp",
+      "aiGenerated": false
+    },
+    {
+      "id": "workplace-20261013-birthday",
+      "title": "생신을 축하하는 기쁨",
+      "description": "생일 케이크 앞에서 환하게 웃으며 축하를 나누는 모습",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "imageUrl": "/workplace-church/assets/photos/birthday.webp",
+      "aiGenerated": false
+    },
+    {
+      "id": "workplace-20261013-fellowship",
+      "title": "식탁에서 이어지는 교제",
+      "description": "함께 식사하며 서로의 삶을 나누는 일터교회 공동체",
+      "status": "published",
+      "publishedAt": "2026-10-13",
+      "retentionDays": 30,
+      "imageUrl": "/workplace-church/assets/photos/fellowship.webp",
+      "aiGenerated": false
+    }
+  ],
   "resources": [],
   "videos": [],
   "reflections": []
